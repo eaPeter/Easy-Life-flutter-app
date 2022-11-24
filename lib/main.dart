@@ -1,6 +1,5 @@
-import 'package:easy_life/screens/splash/splash.dart';
 import 'package:flutter/material.dart';
-import 'screens/splash/splash.dart';
+import 'package:easy_life/screens/splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
