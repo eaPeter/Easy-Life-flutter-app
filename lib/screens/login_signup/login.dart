@@ -1,7 +1,7 @@
 import 'package:easy_life/constants.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/pass_txt_field.dart';
 import '../../widgets/txt_field.dart';
 
 class Login extends StatelessWidget {
@@ -41,54 +41,23 @@ class Login extends StatelessWidget {
                   height: kPadding24,
                 ),
                 const TxtField(
-                  title: 'Email address',
-                  hint: 'Enter your email address',
-                ),
+                    title: 'Email address', hint: 'Enter your email address'),
                 const SizedBox(
                   height: kPadding24,
                 ),
-                PassTxtField(
-                  title: 'Password',
-                  hint: 'Enter your password',
-                ),
+                const PassTxtField(
+                    title: 'Password', hint: 'Enter your password'),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Container(
+                      width: double.infinity,
+                      color: kPrimaryColor,
+                    ))
               ],
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class PassTxtField extends StatelessWidget {
-  final String title;
-  final String hint;
-  final Icon? icon;
-
-  const PassTxtField({
-    Key? key,
-    required this.title,
-    required this.hint,
-    this.icon,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title.toUpperCase()),
-        const SizedBox(
-          height: kPadding6,
-        ),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: const OutlineInputBorder(),
-            suffixIcon: const Icon(Icons.visibility),
-          ),
-        ),
-      ],
     );
   }
 }
