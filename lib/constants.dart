@@ -44,7 +44,9 @@ const kTxtOthersStyle = TextStyle(
 );
 
 //padding
+const kPadding32 = 32.0;
 const kPadding24 = 24.0;
 const kPadding20 = 20.0;
 const kPadding16 = 16.0;
 const kPadding12 = 12.0;
+const kPadding6 = 6.0;
