@@ -1,3 +1,4 @@
+import 'screens/learn/learn.dart';
 import 'package:flutter/material.dart';
 
 //import screens
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const Splash(),
         '/login': (context) => const Login(),
+        'learn': (context) => const Learn(),
       },
     );
   }
