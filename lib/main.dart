@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:easy_life/screens/splash/splash.dart';
+
+//import screens
+import 'screens/splash/splash.dart';
+import 'screens/login_signup/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const Splash(),
+        '/login': (context) => const Login(),
       },
     );
   }
