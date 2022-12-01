@@ -66,7 +66,8 @@ class Login extends StatelessWidget {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(kPrimaryColor),
                   ),
-                  onPressed: () => Navigator.pushNamed(context, '/learn'),
+                  onPressed: () =>
+                      Navigator.pushReplacementNamed(context, '/learn'),
                   child: const Text(
                     'Login',
                     style: kTxtBtnStyle,
@@ -78,19 +79,20 @@ class Login extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: kPadding12),
-                    child: RichText(
-                        text: TextSpan(
+                    child: Row(
                       children: [
-                        const TextSpan(
-                            text: "Don’t have an account yet? ",
+                        const Text("Don’t have an account yet? ",
                             style: kTxtOthersStyle),
-                        TextSpan(
-                            text: "Create an account",
-                            style: kTxtSubTopicStyle.copyWith(
-                                color: kPrimaryColor,
-                                fontWeight: FontWeight.w600)),
+                        TextButton(
+                          onPressed: () =>
+                              Navigator.pushNamed(context, '/signup'),
+                          child: Text("Create an account",
+                              style: kTxtSubTopicStyle.copyWith(
+                                  color: kPrimaryColor,
+                                  fontWeight: FontWeight.w600)),
+                        ),
                       ],
-                    )),
+                    ),
                   ),
                 ],
               ),
