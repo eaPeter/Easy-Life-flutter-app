@@ -31,6 +31,7 @@ class TxtField extends StatelessWidget {
             border: const OutlineInputBorder(),
           ),
         ),
+        const SizedBox(height: kPadding24),
       ],
     );
   }

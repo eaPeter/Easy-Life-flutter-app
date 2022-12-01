@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
-class DefaultButton extends StatelessWidget {
-  const DefaultButton(
+class DefaultAuthButton extends StatelessWidget {
+  const DefaultAuthButton(
       {super.key, required this.btnText, required this.navigate});
 
   final String btnText;
@@ -18,7 +18,7 @@ class DefaultButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(kPrimaryColor),
         ),
-        onPressed: () => Navigator.pushNamed(context, navigate),
+        onPressed: () => Navigator.pushReplacementNamed(context, navigate),
         child: Text(
           btnText,
           style: kTxtBtnStyle,

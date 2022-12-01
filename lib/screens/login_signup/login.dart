@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/pass_txt_field.dart';
 import '../../widgets/txt_field.dart';
+import 'defaultAuthButton.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -50,30 +51,12 @@ class Login extends StatelessWidget {
                 hint: 'Enter your email address',
                 txtController: _emailController,
               ),
-              const SizedBox(
-                height: kPadding24,
-              ),
               PassTxtField(
                 title: 'Password',
                 hint: 'Enter your password',
                 txtController: _passController,
               ),
-              Container(
-                margin: const EdgeInsets.only(top: kPadding32),
-                width: double.infinity,
-                height: 52,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(kPrimaryColor),
-                  ),
-                  onPressed: () =>
-                      Navigator.pushReplacementNamed(context, '/learn'),
-                  child: const Text(
-                    'Login',
-                    style: kTxtBtnStyle,
-                  ),
-                ),
-              ),
+              const DefaultAuthButton(btnText: 'Login', navigate: '/learn'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

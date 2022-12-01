@@ -34,6 +34,7 @@ class PassTxtField extends StatelessWidget {
           ),
           obscureText: true,
         ),
+        const SizedBox(height: kPadding24),
       ],
     );
   }
