@@ -5,8 +5,10 @@ class Learn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
+    return const Scaffold(
+      body: SizedBox(
+        child: Text('Welcome'),
+      ),
     );
   }
 }

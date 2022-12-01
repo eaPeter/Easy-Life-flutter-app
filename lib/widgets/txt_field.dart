@@ -5,11 +5,13 @@ import '../constants.dart';
 class TxtField extends StatelessWidget {
   final String title;
   final String hint;
+  var txtController = TextEditingController();
 
-  const TxtField({
+  TxtField({
     Key? key,
     required this.title,
     required this.hint,
+    required this.txtController,
   }) : super(key: key);
 
   @override
@@ -22,6 +24,7 @@ class TxtField extends StatelessWidget {
           height: kPadding6,
         ),
         TextField(
+          controller: txtController,
           decoration: InputDecoration(
             hintText: hint,
             border: const OutlineInputBorder(),
