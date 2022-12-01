@@ -12,6 +12,7 @@ class Signup extends StatelessWidget {
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
   final _passController = TextEditingController();
+  final dropDownItems = ['Computer Science', 'Business', 'Agriculture'];
 
   @override
   Widget build(BuildContext context) {
