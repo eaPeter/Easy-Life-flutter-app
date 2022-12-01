@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/pass_txt_field.dart';
 import '../../widgets/txt_field.dart';
-import '../learn/learn.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -54,8 +53,11 @@ class Login extends StatelessWidget {
               const SizedBox(
                 height: kPadding24,
               ),
-              const PassTxtField(
-                  title: 'Password', hint: 'Enter your password'),
+              PassTxtField(
+                title: 'Password',
+                hint: 'Enter your password',
+                txtController: _passController,
+              ),
               Container(
                 margin: const EdgeInsets.only(top: kPadding32),
                 width: double.infinity,
@@ -64,7 +66,7 @@ class Login extends StatelessWidget {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(kPrimaryColor),
                   ),
-                  onPressed: () => const Learn(),
+                  onPressed: () => Navigator.pushNamed(context, '/learn'),
                   child: const Text(
                     'Login',
                     style: kTxtBtnStyle,

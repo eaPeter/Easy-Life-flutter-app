@@ -6,12 +6,14 @@ class PassTxtField extends StatelessWidget {
   final String title;
   final String hint;
   final Icon? icon;
+  var txtController = TextEditingController();
 
-  const PassTxtField({
+  PassTxtField({
     Key? key,
     required this.title,
     required this.hint,
     this.icon,
+    required this.txtController,
   }) : super(key: key);
 
   @override
@@ -29,6 +31,7 @@ class PassTxtField extends StatelessWidget {
             border: const OutlineInputBorder(),
             suffixIcon: const Icon(Icons.visibility),
           ),
+          obscureText: true,
         ),
       ],
     );
