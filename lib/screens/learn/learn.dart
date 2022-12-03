@@ -1,5 +1,4 @@
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/screens/notifications/notifications.dart';
 import 'package:easy_life/widgets/iconBtn.dart';
 import 'package:flutter/material.dart';
 

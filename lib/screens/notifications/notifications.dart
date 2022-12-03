@@ -12,11 +12,32 @@ class Notifications extends StatelessWidget {
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kPadding20),
         child: Column(
-          children: const [
-            SizedBox(
+          children: [
+            const SizedBox(
               height: kPadding16,
             ),
-            BackBtn(navigate: '/learn')
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                BackBtn(navigate: '/learn'),
+                Text(
+                  'Notifications',
+                  style: kTxtHeadingLargeStyle,
+                ),
+                SizedBox(width: 45),
+              ],
+            ),
+            Center(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/svg/illustrations/no_notifications.svg',
+                    height: 300,
+                    width: 300,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       )),
