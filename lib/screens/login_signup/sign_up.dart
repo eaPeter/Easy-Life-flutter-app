@@ -11,8 +11,11 @@ class Signup extends StatelessWidget {
   final _fNameController = TextEditingController();
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
+
+  //dropdown variables
   final _passController = TextEditingController();
   final dropDownItems = ['Computer Science', 'Business', 'Agriculture'];
+  String dropDownValue = "Select";
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +67,11 @@ class Signup extends StatelessWidget {
                   title: 'Password',
                   hint: 'Enter password',
                   txtController: _passController),
+              // DropdownButton(
+              //   items: items,
+              //   onChanged: onChanged,
+              //   value: dropDownValue,
+              // ),
               const DefaultAuthButton(btnText: 'Sign up', navigate: '/login'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
