@@ -31,10 +31,14 @@ class Notifications extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    'assets/svg/illustrations/no_notifications.svg',
+                    'assets/images/notifications/no_notifications.png',
                     height: 300,
                     width: 300,
-                  )
+                  ),
+                  const Text('No notifications yet!',
+                      style: kTxtHeadingMainStyle),
+                  const Text('Retry later to check for any new notifications',
+                      style: kTxtSubTopicStyle),
                 ],
               ),
             )
