@@ -1,4 +1,5 @@
 import 'package:easy_life/constants.dart';
+import 'package:easy_life/widgets/backBtn.dart';
 import 'package:flutter/material.dart';
 
 class Notifications extends StatelessWidget {
@@ -6,10 +7,18 @@ class Notifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: kPadding20),
+        padding: const EdgeInsets.symmetric(horizontal: kPadding20),
+        child: Column(
+          children: const [
+            SizedBox(
+              height: kPadding16,
+            ),
+            BackBtn(navigate: '/learn')
+          ],
+        ),
       )),
     );
   }

@@ -19,44 +19,14 @@ class Learn extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            color: kTitleTextColor.withOpacity(0.15)),
-                        shape: BoxShape.circle),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.draw_rounded,
-                        size: 22,
-                        color: kTitleTextColor,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                  const IconBtn(
+                children: const [
+                  IconBtn(
                     iconChoice: Icon(Icons.draw),
                     navigate: '/drawer',
                   ),
-                  Container(
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      border:
-                          Border.all(color: kTitleTextColor.withOpacity(0.15)),
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.notifications_outlined,
-                        size: 22,
-                        color: kTitleTextColor,
-                      ),
-                      onPressed: () =>
-                          Navigator.pushNamed(context, '/notifications'),
-                    ),
+                  IconBtn(
+                    iconChoice: Icon(Icons.notifications_outlined),
+                    navigate: '/notifications',
                   ),
                 ],
               )
