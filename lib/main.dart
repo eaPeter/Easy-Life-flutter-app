@@ -2,6 +2,7 @@ import 'screens/learn/learn.dart';
 import 'package:flutter/material.dart';
 
 //import screens
+import 'screens/notifications/notifications.dart';
 import 'screens/splash/splash.dart';
 import 'screens/login_signup/login.dart';
 import 'screens/login_signup/sign_up.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
         '/learn': (context) => const Learn(),
+        '/notifications': (context) => const Notifications(),
       },
     );
   }
