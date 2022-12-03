@@ -1,5 +1,6 @@
 import 'package:easy_life/constants.dart';
 import 'package:easy_life/screens/notifications/notifications.dart';
+import 'package:easy_life/widgets/iconBtn.dart';
 import 'package:flutter/material.dart';
 
 class Learn extends StatelessWidget {
@@ -34,6 +35,10 @@ class Learn extends StatelessWidget {
                       ),
                       onPressed: () {},
                     ),
+                  ),
+                  const IconBtn(
+                    iconChoice: Icon(Icons.draw),
+                    navigate: '/drawer',
                   ),
                   Container(
                     height: 45,

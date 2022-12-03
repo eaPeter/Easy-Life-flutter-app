@@ -1,3 +1,4 @@
+import 'screens/learn/Learndrawer.dart';
 import 'screens/learn/learn.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
         '/learn': (context) => const Learn(),
+        '/drawer': (context) => const LearnDrawer(),
         '/notifications': (context) => const Notifications(),
       },
     );
