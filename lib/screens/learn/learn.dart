@@ -1,5 +1,5 @@
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/widgets/iconBtn.dart';
+import 'package:easy_life/widgets/icon_btn.dart';
 import 'package:flutter/material.dart';
 
 class Learn extends StatelessWidget {

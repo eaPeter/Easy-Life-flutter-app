@@ -3,7 +3,7 @@ import 'package:easy_life/widgets/pass_txt_field.dart';
 import 'package:easy_life/widgets/txt_field.dart';
 import 'package:flutter/material.dart';
 
-import 'defaultAuthButton.dart';
+import 'default_auth_button.dart';
 
 class Signup extends StatelessWidget {
   Signup({super.key});
