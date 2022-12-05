@@ -7,11 +7,14 @@ class Learn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final fullWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: kPadding16,
@@ -19,13 +22,40 @@ class Learn extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
+                  IconBtn(iconChoice: Icon(Icons.draw), navigate: '/drawer'),
                   IconBtn(
-                    iconChoice: Icon(Icons.draw),
-                    navigate: '/drawer',
+                      iconChoice: Icon(Icons.notifications_outlined),
+                      navigate: '/notifications'),
+                ],
+              ),
+              const SizedBox(height: kPadding32),
+              const Text('Seek Knowledge', style: kTxtHeadingLargeStyle),
+              const SizedBox(height: kPadding20),
+              Row(
+                children: [
+                  Container(
+                    height: 45,
+                    width: fullWidth * 0.725,
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: const BorderRadius.all(Radius.circular(6)),
+                    ),
+                    child: Row(
+                      children: [],
+                    ),
                   ),
-                  IconBtn(
-                    iconChoice: Icon(Icons.notifications_outlined),
-                    navigate: '/notifications',
+                  const Spacer(),
+                  Container(
+                    height: 45,
+                    width: 45,
+                    decoration: const BoxDecoration(
+                        color: kPrimaryColor,
+                        borderRadius: BorderRadius.all(Radius.circular(6))),
+                    child: const Icon(
+                      Icons.filter_1_outlined,
+                      color: kBackgroundColor,
+                      size: 20,
+                    ),
                   ),
                 ],
               )
