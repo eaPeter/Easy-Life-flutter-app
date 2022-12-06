@@ -16,7 +16,7 @@ class DefaultAuthButton extends StatelessWidget {
       height: 52,
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(kPrimaryColor),
+          backgroundColor: MaterialStateProperty.all(kColorPrimary),
         ),
         onPressed: () => Navigator.pushReplacementNamed(context, navigate),
         child: Text(

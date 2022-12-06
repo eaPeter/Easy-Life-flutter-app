@@ -15,7 +15,7 @@ class IconBtn extends StatelessWidget {
       width: 45,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          border: Border.all(color: kTitleTextColor.withOpacity(0.15)),
+          border: Border.all(color: kColorTitleText.withOpacity(0.15)),
           shape: BoxShape.circle),
       child: IconButton(
         icon: iconChoice,

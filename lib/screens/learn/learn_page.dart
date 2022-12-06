@@ -13,6 +13,15 @@ class Learn extends StatelessWidget {
 
     return Scaffold(
       drawer: const DrawerEasy(),
+      appBar: AppBar(
+          backgroundColor: kColorBackground,
+          elevation: 0,
+          iconTheme: const IconThemeData(color: kColorTitleText),
+          actions: const [
+            IconBtn(
+                iconChoice: Icon(Icons.notifications_outlined),
+                navigate: '/notifications'),
+          ]),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
@@ -25,6 +34,7 @@ class Learn extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
+                  SizedBox(width: 80),
                   IconBtn(iconChoice: Icon(Icons.draw), navigate: '/drawer'),
                   IconBtn(
                       iconChoice: Icon(Icons.notifications_outlined),
@@ -52,11 +62,11 @@ class Learn extends StatelessWidget {
                     height: 45,
                     width: 45,
                     decoration: const BoxDecoration(
-                        color: kPrimaryColor,
+                        color: kColorPrimary,
                         borderRadius: BorderRadius.all(Radius.circular(6))),
                     child: const Icon(
                       Icons.filter_1_outlined,
-                      color: kBackgroundColor,
+                      color: kColorBackground,
                       size: 20,
                     ),
                   ),

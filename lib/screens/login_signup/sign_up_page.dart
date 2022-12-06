@@ -20,7 +20,7 @@ class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: kColorBackground,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
@@ -87,7 +87,7 @@ class Signup extends StatelessWidget {
                               Navigator.pushNamed(context, '/login'),
                           child: Text("Log into your account",
                               style: kTxtSubTopicStyle.copyWith(
-                                  color: kPrimaryColor,
+                                  color: kColorPrimary,
                                   fontWeight: FontWeight.w600)),
                         ),
                       ],
