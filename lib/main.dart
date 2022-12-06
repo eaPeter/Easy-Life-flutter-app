@@ -1,12 +1,12 @@
 import 'screens/drawer.dart';
-import 'screens/learn/learn.dart';
+import 'screens/learn/learn_page.dart';
 import 'package:flutter/material.dart';
 
 //import screens
-import 'screens/notifications/notifications.dart';
-import 'screens/splash/splash.dart';
-import 'screens/login_signup/login.dart';
-import 'screens/login_signup/sign_up.dart';
+import 'screens/notifications/notifications_page.dart';
+import 'screens/splash/splash_page.dart';
+import 'screens/login_signup/login_page.dart';
+import 'screens/login_signup/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());

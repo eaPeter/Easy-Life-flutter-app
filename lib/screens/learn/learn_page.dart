@@ -2,6 +2,8 @@ import 'package:easy_life/constants.dart';
 import 'package:easy_life/widgets/icon_btn.dart';
 import 'package:flutter/material.dart';
 
+import '../drawer.dart';
+
 class Learn extends StatelessWidget {
   const Learn({super.key});
 
@@ -10,6 +12,7 @@ class Learn extends StatelessWidget {
     final fullWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      drawer: const DrawerEasy(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
