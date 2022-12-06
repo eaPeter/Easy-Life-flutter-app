@@ -78,7 +78,7 @@ class Learn extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Scholarships',
+                    'Machine Learning',
                     style: kTxtHeadingMainStyle,
                   ),
                   GestureDetector(
