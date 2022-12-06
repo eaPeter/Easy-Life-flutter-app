@@ -16,7 +16,7 @@ class DefaultButton extends StatelessWidget {
       height: 52,
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(kPrimaryColor),
+          backgroundColor: MaterialStateProperty.all(kColorPrimary),
         ),
         onPressed: () => Navigator.pushNamed(context, navigate),
         child: Text(

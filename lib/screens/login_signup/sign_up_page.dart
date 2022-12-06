@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'default_auth_button.dart';
 
+// ignore: must_be_immutable
 class Signup extends StatelessWidget {
   Signup({super.key});
 

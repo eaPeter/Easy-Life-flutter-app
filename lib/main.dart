@@ -1,3 +1,5 @@
+import 'package:easy_life/screens/see_all.dart';
+
 import 'screens/drawer.dart';
 import 'screens/learn/learn_page.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +27,9 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
         '/learn': (context) => const Learn(),
-        '/drawer': (context) => const DrawerEasy(),
+        '/drawer_page': (context) => const DrawerPage(),
         '/notifications': (context) => const Notifications(),
+        '/see_all': (context) => const SeeAll(),
       },
     );
   }
