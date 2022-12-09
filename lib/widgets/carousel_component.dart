@@ -1,15 +1,19 @@
+import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CarouselComponent extends StatelessWidget {
   const CarouselComponent(
       {super.key,
       required this.image,
       required this.title,
-      required this.subtitle});
+      required this.subtitle,
+      required this.star});
 
   final String image;
   final String title;
   final String subtitle;
+  final String star;
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +51,24 @@ class CarouselComponent extends StatelessWidget {
               style: const TextStyle(color: Color.fromRGBO(0, 0, 0, 0.45)),
             ),
           ),
+          const SizedBox(
+            height: 5,
+          ),
+          Row(
+            children: [
+              Text(star, style: kTxtOthersStyle),
+              const SizedBox(width: kPadding6),
+              SvgPicture.asset('assets/svg/star_filled.svg', height: 12.0),
+              const SizedBox(width: 2.0),
+              SvgPicture.asset('assets/svg/star_filled.svg', height: 12.0),
+              const SizedBox(width: 2.0),
+              SvgPicture.asset('assets/svg/star_filled.svg', height: 12.0),
+              const SizedBox(width: 2.0),
+              SvgPicture.asset('assets/svg/star_filled.svg', height: 12.0),
+              const SizedBox(width: 2.0),
+              SvgPicture.asset('assets/svg/star_filled.svg', height: 12.0),
+            ],
+          )
         ],
       ),
     ]);
