@@ -30,6 +30,23 @@ class DetailedLearnPage extends StatelessWidget {
                   whiteColorBool: true,
                 ),
               ),
+            ),
+            const SizedBox(height: kPadding16),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: kPadding20),
+              child: Row(
+                children: [
+                  Text(
+                    "Machine Learning - Foundational Guide",
+                    style: kTxtHeadingMainStyle,
+                  ),
+                  Container(
+                    height: 24,
+                    width: 24,
+                    child: Icon(Icons.favorite_border),
+                  )
+                ],
+              ),
             )
           ],
         ),
