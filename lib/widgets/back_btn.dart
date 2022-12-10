@@ -21,15 +21,13 @@ class BackBtn extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
           border: Border.all(
-              color: whiteColorBool
-                  ? kColorTitleText.withOpacity(0.15)
-                  : kColorBackground),
+              color: whiteColorBool ? kColorBackground : kColorTitleText),
           shape: BoxShape.circle),
       child: IconButton(
         icon: Icon(
           Icons.arrow_back_ios,
           size: 22,
-          color: whiteColorBool ? kColorTitleText : kColorBackground,
+          color: whiteColorBool ? kColorBackground : kColorTitleText,
         ),
         onPressed: () => Navigator.popAndPushNamed(context, navigate),
       ),
