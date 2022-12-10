@@ -21,18 +21,27 @@ class Learn extends StatelessWidget {
           elevation: 0,
           iconTheme: const IconThemeData(color: kColorTitleText),
           actions: const [
-            IconBtn(
-                iconChoice: Icon(Icons.notifications_outlined),
-                navigate: '/notifications'),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: kPadding20),
+              child: IconBtn(
+                  iconChoice: Icon(Icons.notifications_outlined),
+                  navigate: '/notifications'),
+            ),
           ]),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 18.0,
         items: [
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Learn.svg', height: 22),
-              label: "Learn"),
+              icon: SvgPicture.asset('assets/svg/Learn.svg'), label: "Learn"),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Learn.svg', height: 22),
-              label: "Learn"),
+              icon: SvgPicture.asset('assets/svg/Apply.svg'), label: "Apply"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/Play.svg'), label: "Play"),
+          // BottomNavigationBarItem(
+          //     icon: SvgPicture.asset('assets/svg/Music.svg'), label: "Music"),
+          // BottomNavigationBarItem(
+          //     icon: SvgPicture.asset('assets/svg/Settings.svg'),
+          //     label: "Settings"),
         ],
       ),
       // Container(
