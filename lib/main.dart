@@ -5,7 +5,7 @@ import 'screens/notifications/notifications_page.dart';
 import 'screens/splash/splash_page.dart';
 import 'screens/login_signup/login_page.dart';
 import 'screens/login_signup/sign_up_page.dart';
-import 'package:easy_life/screens/learn/detail_learn_page.dart';
+import 'package:easy_life/screens/learn/detailed_learn_page.dart';
 import 'package:easy_life/screens/see_all.dart';
 import 'screens/drawer.dart';
 import 'screens/learn/learn_page.dart';
