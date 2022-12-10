@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
+// ignore: must_be_immutable
 class BackBtn extends StatelessWidget {
-  const BackBtn({super.key, required this.navigate});
+  const BackBtn({
+    super.key,
+    required this.navigate,
+    this.whiteColorBool = false,
+  });
 
   final String navigate;
+  final bool whiteColorBool;
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +20,16 @@ class BackBtn extends StatelessWidget {
       width: 45,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          border: Border.all(color: kColorTitleText.withOpacity(0.15)),
+          border: Border.all(
+              color: whiteColorBool
+                  ? kColorTitleText.withOpacity(0.15)
+                  : kColorBackground),
           shape: BoxShape.circle),
       child: IconButton(
-        icon: const Icon(
+        icon: Icon(
           Icons.arrow_back_ios,
           size: 22,
-          color: kColorTitleText,
+          color: whiteColorBool ? kColorTitleText : kColorBackground,
         ),
         onPressed: () => Navigator.popAndPushNamed(context, navigate),
       ),

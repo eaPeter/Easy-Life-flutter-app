@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // '/': (context) => const Splash(),
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
-        // '/learn': (context) => const Learn(),
+        '/learn': (context) => const Learn(),
         '/detailed_learn': (context) => const DetailedLearnPage(),
         '/drawer_page': (context) => const DrawerPage(),
         '/notifications': (context) => const Notifications(),

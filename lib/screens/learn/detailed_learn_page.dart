@@ -1,3 +1,5 @@
+import 'package:easy_life/constants.dart';
+import 'package:easy_life/widgets/back_btn.dart';
 import 'package:flutter/material.dart';
 
 class DetailedLearnPage extends StatelessWidget {
@@ -11,6 +13,7 @@ class DetailedLearnPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
+              alignment: Alignment.topLeft,
               height: 295,
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -18,6 +21,13 @@ class DetailedLearnPage extends StatelessWidget {
                   fit: BoxFit.fill,
                   image: AssetImage(
                       'assets/images/learn/Machine_learning_large.jpg'),
+                ),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(kPadding20),
+                child: BackBtn(
+                  navigate: '/learn',
+                  whiteColorBool: true,
                 ),
               ),
             )
