@@ -1,5 +1,6 @@
 import 'package:easy_life/constants.dart';
 import 'package:easy_life/widgets/back_btn.dart';
+import 'package:easy_life/widgets/sub_title_detailed_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -67,11 +68,32 @@ class DetailedLearnPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      SvgPicture.asset('assets/svg/gamepad.svg',
-                          height: 6, width: 6),
-                      const SizedBox(
-                        height: kPadding12,
+                      const DetailedPageSubTitle(
+                          svgPic: 'assets/svg/gamepad.svg',
+                          text: '130 playing'),
+                      Container(
+                        padding:
+                            const EdgeInsets.symmetric(horizontal: kPadding12),
+                        child: const Text(
+                          '|',
+                          style:
+                              TextStyle(color: Color.fromRGBO(0, 0, 0, 0.45)),
+                        ),
                       ),
+                      const DetailedPageSubTitle(
+                          svgPic: 'assets/svg/rank.svg', text: '#7 Ranked'),
+                      Container(
+                        padding:
+                            const EdgeInsets.symmetric(horizontal: kPadding12),
+                        child: const Text(
+                          '|',
+                          style:
+                              TextStyle(color: Color.fromRGBO(0, 0, 0, 0.45)),
+                        ),
+                      ),
+                      const DetailedPageSubTitle(
+                          svgPic: 'assets/svg/checkBox_quizzes_taken.svg',
+                          text: '65 Quizzes'),
                     ],
                   )
                 ],
