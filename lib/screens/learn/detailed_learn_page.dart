@@ -136,6 +136,7 @@ class DetailedLearnPage extends StatelessWidget {
                                   const BorderRadius.all(Radius.circular(6)),
                             ),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   width: double.infinity,
@@ -162,6 +163,26 @@ class DetailedLearnPage extends StatelessWidget {
                                     child: const Icon(Icons.favorite_border,
                                         size: 20),
                                   ),
+                                ),
+                                const SizedBox(height: kPadding8),
+                                const Text('Accounting', style: kTxtTopicStyle),
+                                Row(
+                                  children: [
+                                    const DetailedPageSubTitle(
+                                        svgPic: 'assets/svg/gamepad.svg',
+                                        text: '130 playing'),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: kPadding12),
+                                      child: const Text('|',
+                                          style: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  0, 0, 0, 0.45))),
+                                    ),
+                                    const DetailedPageSubTitle(
+                                        svgPic: 'assets/svg/rank.svg',
+                                        text: '#7 Ranked'),
+                                  ],
                                 ),
                               ],
                             ),

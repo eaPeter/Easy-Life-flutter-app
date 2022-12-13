@@ -54,4 +54,6 @@ const kPadding24 = 24.0;
 const kPadding20 = 20.0;
 const kPadding16 = 16.0;
 const kPadding12 = 12.0;
+const kPadding10 = 10.0;
+const kPadding8 = 8.0;
 const kPadding6 = 6.0;
