@@ -20,13 +20,13 @@ class Notifications extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   BackBtn(navigate: '/learn'),
-                  const Text(
+                  Text(
                     'Notifications',
                     style: kTxtHeadingLargeStyle,
                   ),
-                  const SizedBox(width: 45),
+                  SizedBox(width: 45),
                 ],
               ),
               Center(
