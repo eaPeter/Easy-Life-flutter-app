@@ -31,7 +31,7 @@ class _LikeBtnState extends State<LikeBtn> {
         icon: Icon(
           widget.isLiked ? Icons.favorite : Icons.favorite_border,
           size: 20,
-          color: widget.isLiked ? kColorPrimary : kColorTextLight,
+          color: widget.isLiked ? Colors.red : kColorTextLight,
         ),
       ),
     );
