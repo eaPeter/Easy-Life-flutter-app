@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DetailedLearnPage extends StatelessWidget {
-  const DetailedLearnPage({super.key});
+  DetailedLearnPage({super.key});
+
+  final ScrollController _controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,7 @@ class DetailedLearnPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          controller: _controller,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -113,17 +116,36 @@ class DetailedLearnPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 120,
-                      child: GridView.builder(
-                          gridDelegate:
-                              SliverGridDelegateWithMaxCrossAxisExtent(
-                                  maxCrossAxisExtent: 165,
-                                  crossAxisSpacing: kPadding12),
-                          itemBuilder: (BuildContext context, index) {
-                            return Container();
-                          }),
-                    )
+                    const SizedBox(height: kPadding12),
+                    GridView.builder(
+                        controller: _controller,
+                        shrinkWrap: true,
+                        gridDelegate:
+                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                                maxCrossAxisExtent: 200,
+                                mainAxisSpacing: kPadding12,
+                                crossAxisSpacing: kPadding12),
+                        itemCount: 10,
+                        itemBuilder: (BuildContext context, index) {
+                          return Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: kColorTitleText.withOpacity(0.3)),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                            ),
+                            child: Column(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(),
+                                )
+                              ],
+                            ),
+                          );
+                        }),
+                    const SizedBox(
+                      height: kPadding32,
+                    ),
                   ],
                 ),
               ),
