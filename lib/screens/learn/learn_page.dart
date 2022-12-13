@@ -174,8 +174,38 @@ class _LearnState extends State<Learn> {
                   }).toList(),
                 ),
                 const SizedBox(
-                  height: kPadding16,
+                  height: kPadding24,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Accounting', style: kTxtHeadingMainStyle),
+                    GestureDetector(
+                      onTap: (() => Navigator.pushNamed(context, '/see_all')),
+                      child: const Text('See all', style: kTxtSubTopicStyle),
+                    ),
+                  ],
+                ),
+                CarouselSlider(
+                  options: CarouselOptions(
+                      height: 250.0, autoPlay: true, viewportFraction: 0.6),
+                  items: [1, 2, 3, 4, 5].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                          width: MediaQuery.of(context).size.width,
+                          child: const CarouselComponent(
+                            image: "learn/Accounting.jpg",
+                            title: "Advanced Mathematics Support Programme",
+                            subtitle: "Intermediate",
+                            star: '5.0',
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+                const SizedBox(height: kPadding16),
               ],
             ),
           ),
