@@ -179,7 +179,7 @@ class _LearnState extends State<Learn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Accounting', style: kTxtHeadingMainStyle),
+                    const Text('Neuro Network', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
                       child: const Text('See all', style: kTxtSubTopicStyle),
@@ -195,8 +195,8 @@ class _LearnState extends State<Learn> {
                         return SizedBox(
                           width: MediaQuery.of(context).size.width,
                           child: const CarouselComponent(
-                            image: "learn/Accounting.jpg",
-                            title: "Advanced Mathematics Support Programme",
+                            image: "learn/neuro_Network.jpg",
+                            title: "Machine Learning - NLP ",
                             subtitle: "Intermediate",
                             star: '5.0',
                           ),
