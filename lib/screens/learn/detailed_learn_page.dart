@@ -57,16 +57,11 @@ class DetailedLearnPage extends StatelessWidget {
                             border: Border.all(
                                 color: kColorTitleText.withOpacity(0.15)),
                             shape: BoxShape.circle),
-                        child: const Icon(
-                          Icons.favorite_border,
-                          size: 20,
-                        ),
+                        child: const Icon(Icons.favorite_border, size: 20),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: kPadding12,
-                  ),
+                  const SizedBox(height: kPadding12),
                   Row(
                     children: [
                       const DetailedPageSubTitle(
@@ -75,31 +70,25 @@ class DetailedLearnPage extends StatelessWidget {
                       Container(
                         padding:
                             const EdgeInsets.symmetric(horizontal: kPadding12),
-                        child: const Text(
-                          '|',
-                          style:
-                              TextStyle(color: Color.fromRGBO(0, 0, 0, 0.45)),
-                        ),
+                        child: const Text('|',
+                            style: TextStyle(
+                                color: Color.fromRGBO(0, 0, 0, 0.45))),
                       ),
                       const DetailedPageSubTitle(
                           svgPic: 'assets/svg/rank.svg', text: '#7 Ranked'),
                       Container(
                         padding:
                             const EdgeInsets.symmetric(horizontal: kPadding12),
-                        child: const Text(
-                          '|',
-                          style:
-                              TextStyle(color: Color.fromRGBO(0, 0, 0, 0.45)),
-                        ),
+                        child: const Text('|',
+                            style: TextStyle(
+                                color: Color.fromRGBO(0, 0, 0, 0.45))),
                       ),
                       const DetailedPageSubTitle(
                           svgPic: 'assets/svg/checkBox_quizzes_taken.svg',
                           text: '65 Quizzes'),
                     ],
                   ),
-                  const SizedBox(
-                    height: kPadding16,
-                  ),
+                  const SizedBox(height: kPadding16),
                   Text(
                     'This course aims at testing your knowledge on Machine Leaning. The fundamentals of programming and internet security are prerequisites needed to be able to enjoy this game. Surprisingly, you can learn a lot more with playing game than reading when you are stressed. Rank up and receive rewards for your hardwork. Enjoy!!!',
                     style: kTxtSubTopicStyle.copyWith(
@@ -122,7 +111,8 @@ class DetailedLearnPage extends StatelessWidget {
                   ),
                   GridView.builder(
                       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: 165),
+                          maxCrossAxisExtent: 165,
+                          crossAxisSpacing: kPadding12),
                       itemBuilder: (BuildContext context, index) {
                         return Container();
                       })
