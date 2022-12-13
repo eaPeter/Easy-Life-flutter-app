@@ -105,11 +105,19 @@ class DetailedLearnPage extends StatelessWidget {
                     style: kTxtSubTopicStyle.copyWith(
                         color: kColorTitleText.withOpacity(0.8)),
                   ),
-                  const SizedBox(
-                    height: kPadding24,
-                  ),
+                  const SizedBox(height: kPadding24),
                   const DefaultButton(
                       btnText: 'Learn', navigate: '/course_learn'),
+                  const SizedBox(height: kPadding24),
+                  Row(
+                    children: [
+                      Text('Other Courses', style: kTxtHeadingMainStyle),
+                      GestureDetector(
+                        onTap: (() => Navigator.pushNamed(context, '/see_all')),
+                        child: const Text('See all', style: kTxtSubTopicStyle),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
