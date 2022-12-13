@@ -146,18 +146,7 @@ class DetailedLearnPage extends StatelessWidget {
                                             'assets/images/learn/Machine_learning_large.jpg'),
                                         fit: BoxFit.fill),
                                   ),
-                                  child: Container(
-                                    height: 32,
-                                    width: 32,
-                                    decoration: BoxDecoration(
-                                        color: kColorBackground,
-                                        border: Border.all(
-                                            color: kColorTitleText
-                                                .withOpacity(0.15)),
-                                        shape: BoxShape.circle),
-                                    child: const Icon(Icons.favorite_border,
-                                        size: 20),
-                                  ),
+                                  child: const LikeBtn(),
                                 ),
                                 const SizedBox(height: kPadding8),
                                 const Text('Accounting', style: kTxtTopicStyle),
