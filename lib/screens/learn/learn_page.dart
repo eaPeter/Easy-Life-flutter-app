@@ -193,10 +193,7 @@ class Learn extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
-                      child: const Text(
-                        'See all',
-                        style: kTxtSubTopicStyle,
-                      ),
+                      child: const Text('See all', style: kTxtSubTopicStyle),
                     ),
                   ],
                 ),
