@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/components/carousel_component.dart';
+import 'package:easy_life/components/main_carousel_component.dart';
 import 'package:easy_life/components/icon_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
