@@ -121,10 +121,7 @@ class Learn extends StatelessWidget {
                           const SizedBox(width: 16),
                           SvgPicture.asset('assets/svg/Search.svg'),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Search',
-                            style: kTxtSubTopicStyle,
-                          )
+                          const Text('Search', style: kTxtSubTopicStyle)
                         ],
                       ),
                     ),
@@ -149,16 +146,10 @@ class Learn extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      'Machine Learning',
-                      style: kTxtHeadingMainStyle,
-                    ),
+                    const Text('Machine Learning', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
-                      child: const Text(
-                        'See all',
-                        style: kTxtSubTopicStyle,
-                      ),
+                      child: const Text('See all', style: kTxtSubTopicStyle),
                     ),
                   ],
                 ),
@@ -187,10 +178,7 @@ class Learn extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      'Accounting',
-                      style: kTxtHeadingMainStyle,
-                    ),
+                    const Text('Accounting', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
                       child: const Text('See all', style: kTxtSubTopicStyle),
