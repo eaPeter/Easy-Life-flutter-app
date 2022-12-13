@@ -111,7 +111,7 @@ class DetailedLearnPage extends StatelessWidget {
                   const SizedBox(height: kPadding24),
                   Row(
                     children: [
-                      Text('Other Courses', style: kTxtHeadingMainStyle),
+                      const Text('Other Courses', style: kTxtHeadingMainStyle),
                       GestureDetector(
                         onTap: (() => Navigator.pushNamed(context, '/see_all')),
                         child: const Text('See all', style: kTxtSubTopicStyle),
