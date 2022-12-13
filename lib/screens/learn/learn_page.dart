@@ -93,6 +93,13 @@ class _LearnState extends State<Learn> {
                           const Text('Search', style: kTxtSubTopicStyle)
                         ],
                       ),
+                      // TextField(
+                      //   decoration: InputDecoration(
+                      //     icon: SvgPicture.asset('assets/svg/Search.svg'),
+                      //     hintText: 'Search',
+                      //     border: const OutlineInputBorder(),
+                      //   ),
+                      // ),
                     ),
                     const Spacer(),
                     Container(
