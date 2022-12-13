@@ -1,3 +1,4 @@
+import 'package:easy_life/components/like_icon.dart';
 import 'package:easy_life/constants.dart';
 import 'package:easy_life/components/back_btn.dart';
 import 'package:easy_life/components/default_button.dart';
@@ -54,15 +55,7 @@ class DetailedLearnPage extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        Container(
-                          height: 32,
-                          width: 32,
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: kColorTitleText.withOpacity(0.15)),
-                              shape: BoxShape.circle),
-                          child: const Icon(Icons.favorite_border, size: 20),
-                        ),
+                        const LikeBtn(),
                       ],
                     ),
                     const SizedBox(height: kPadding12),

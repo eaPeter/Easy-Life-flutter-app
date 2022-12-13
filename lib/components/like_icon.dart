@@ -20,18 +20,19 @@ class _LikeBtnState extends State<LikeBtn> {
       height: 32,
       width: 32,
       decoration: BoxDecoration(
+          color: kColorBackground,
           border: Border.all(color: kColorTitleText.withOpacity(0.15)),
           shape: BoxShape.circle),
-      child: IconButton(
-        onPressed: () {
+      child: InkWell(
+        onTap: () {
           setState(() {
             _isLiked = !_isLiked;
           });
         },
-        icon: Icon(
-          widget.isLiked ? Icons.favorite : Icons.favorite_border,
+        child: Icon(
+          _isLiked ? Icons.favorite : Icons.favorite_border,
           size: 20,
-          color: widget.isLiked ? Colors.red : kColorTextLight,
+          color: _isLiked ? Colors.red : kColorTextLight,
         ),
       ),
     );
