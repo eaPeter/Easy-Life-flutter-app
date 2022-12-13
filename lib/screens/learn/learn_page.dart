@@ -7,8 +7,15 @@ import 'package:flutter_svg/svg.dart';
 
 import '../drawer.dart';
 
-class Learn extends StatelessWidget {
+class Learn extends StatefulWidget {
   const Learn({super.key});
+
+  @override
+  State<Learn> createState() => _LearnState();
+}
+
+class _LearnState extends State<Learn> {
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,72 +36,34 @@ class Learn extends StatelessWidget {
             ),
           ]),
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 18.0,
+        currentIndex: index,
+        onTap: (value) {
+          setState(() {
+            index = value;
+          });
+        },
+        showUnselectedLabels: true,
+        unselectedItemColor: kColorTextLight,
+        selectedItemColor: kColorTitleText,
         items: [
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Learn.svg'), label: "Learn"),
+            icon: SvgPicture.asset('assets/svg/Learn.svg', height: 18),
+            label: "Learn",
+          ),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Apply.svg'), label: "Apply"),
+              icon: SvgPicture.asset('assets/svg/Apply.svg', height: 18),
+              label: "Apply"),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Play.svg'), label: "Play"),
-          // BottomNavigationBarItem(
-          //     icon: SvgPicture.asset('assets/svg/Music.svg'), label: "Music"),
-          // BottomNavigationBarItem(
-          //     icon: SvgPicture.asset('assets/svg/Settings.svg'),
-          //     label: "Settings"),
+              icon: SvgPicture.asset('assets/svg/Play.svg', height: 18),
+              label: "Play"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/Music.svg', height: 18),
+              label: "Music"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/Settings.svg', height: 18),
+              label: "Settings"),
         ],
       ),
-      // Container(
-      //   padding: const EdgeInsets.symmetric(horizontal: kPadding32),
-      //   height: 90,
-      //   color: kColorBackground,
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //     children: [
-      //       Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           SvgPicture.asset('assets/svg/Learn.svg', height: 22),
-      //           const SizedBox(height: kPadding6),
-      //           Text("Learn",
-      //               style: kTxtSubTopicStyle.copyWith(color: kColorTitleText))
-      //         ],
-      //       ),
-      //       Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           SvgPicture.asset('assets/svg/Apply.svg', height: 22),
-      //           const SizedBox(height: kPadding6),
-      //           const Text("Apply", style: kTxtOthersStyle)
-      //         ],
-      //       ),
-      //       Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           SvgPicture.asset('assets/svg/Play.svg', height: 22),
-      //           const SizedBox(height: kPadding6),
-      //           const Text("Play", style: kTxtOthersStyle)
-      //         ],
-      //       ),
-      //       Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           SvgPicture.asset('assets/svg/Music.svg', height: 22),
-      //           const SizedBox(height: kPadding6),
-      //           const Text("Music", style: kTxtOthersStyle)
-      //         ],
-      //       ),
-      //       Column(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           SvgPicture.asset('assets/svg/Settings.svg', height: 22),
-      //           const SizedBox(height: kPadding6),
-      //           const Text("Settings", style: kTxtOthersStyle)
-      //         ],
-      //       ),
-      //     ],
-      //   ),
-      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

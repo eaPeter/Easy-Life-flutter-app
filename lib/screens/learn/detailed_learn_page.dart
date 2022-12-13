@@ -110,14 +110,22 @@ class DetailedLearnPage extends StatelessWidget {
                       btnText: 'Learn', navigate: '/course_learn'),
                   const SizedBox(height: kPadding24),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text('Other Courses', style: kTxtHeadingMainStyle),
+                      const Spacer(),
                       GestureDetector(
                         onTap: (() => Navigator.pushNamed(context, '/see_all')),
                         child: const Text('See all', style: kTxtSubTopicStyle),
                       ),
                     ],
-                  )
+                  ),
+                  GridView.builder(
+                      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                          maxCrossAxisExtent: 165),
+                      itemBuilder: (BuildContext context, index) {
+                        return Container();
+                      })
                 ],
               ),
             ),
