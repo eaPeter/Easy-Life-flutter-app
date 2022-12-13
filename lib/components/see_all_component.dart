@@ -4,19 +4,22 @@ import '../constants.dart';
 import 'like_icon.dart';
 
 class SeeAllComponent extends StatelessWidget {
-  const SeeAllComponent(
-      {super.key,
-      required this.title,
-      required this.subTitle,
-      required this.image});
+  const SeeAllComponent({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.image,
+  });
 
   final String title;
   final String subTitle;
   final String image;
+  // final ScrollController controller;
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+        // controller: controller,
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
