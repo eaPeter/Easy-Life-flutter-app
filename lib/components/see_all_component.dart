@@ -4,7 +4,15 @@ import '../constants.dart';
 import 'like_icon.dart';
 
 class SeeAllComponent extends StatelessWidget {
-  const SeeAllComponent({super.key});
+  const SeeAllComponent(
+      {super.key,
+      required this.title,
+      required this.subTitle,
+      required this.image});
+
+  final String title;
+  final String subTitle;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -31,20 +39,20 @@ class SeeAllComponent extends StatelessWidget {
                   height: 120,
                   alignment: Alignment.topRight,
                   padding: const EdgeInsets.all(kPadding12),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(3)),
                     image: DecorationImage(
-                        image: AssetImage(
-                            'assets/images/learn/Machine_learning_large.jpg'),
-                        fit: BoxFit.fill),
+                        image: AssetImage(image), fit: BoxFit.fill),
                   ),
                   child: const LikeBtn(),
                 ),
                 const SizedBox(height: kPadding8),
-                const Text('Accounting', style: kTxtTopicStyle),
+                Text(title, style: kTxtTopicStyle),
                 const SizedBox(height: kPadding4),
-                const Text('#7 Ranked',
-                    style: TextStyle(color: Color.fromRGBO(0, 0, 0, 0.6))),
+                Text(
+                  subTitle,
+                  style: const TextStyle(color: Color.fromRGBO(0, 0, 0, 0.6)),
+                ),
               ],
             ),
           );
