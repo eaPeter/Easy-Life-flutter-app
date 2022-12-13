@@ -1,7 +1,7 @@
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/widgets/back_btn.dart';
-import 'package:easy_life/widgets/default_button.dart';
-import 'package:easy_life/widgets/sub_title_detailed_page.dart';
+import 'package:easy_life/components/back_btn.dart';
+import 'package:easy_life/components/default_button.dart';
+import 'package:easy_life/components/sub_title_detailed_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -124,11 +124,13 @@ class DetailedLearnPage extends StatelessWidget {
                             const SliverGridDelegateWithMaxCrossAxisExtent(
                                 maxCrossAxisExtent: 200,
                                 mainAxisSpacing: kPadding12,
-                                crossAxisSpacing: kPadding12),
+                                crossAxisSpacing: kPadding12,
+                                childAspectRatio: 0.96),
                         itemCount: 10,
                         itemBuilder: (BuildContext context, index) {
                           return Container(
-                            padding: EdgeInsets.only(left: 6, top: 6, right: 6),
+                            padding: const EdgeInsets.only(
+                                left: 6, top: 6, right: 6),
                             decoration: BoxDecoration(
                               border: Border.all(
                                   color: kColorTitleText.withOpacity(0.3)),
@@ -166,24 +168,10 @@ class DetailedLearnPage extends StatelessWidget {
                                 ),
                                 const SizedBox(height: kPadding8),
                                 const Text('Accounting', style: kTxtTopicStyle),
-                                Row(
-                                  children: [
-                                    const DetailedPageSubTitle(
-                                        svgPic: 'assets/svg/gamepad.svg',
-                                        text: '130 playing'),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: kPadding12),
-                                      child: const Text('|',
-                                          style: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  0, 0, 0, 0.45))),
-                                    ),
-                                    const DetailedPageSubTitle(
-                                        svgPic: 'assets/svg/rank.svg',
-                                        text: '#7 Ranked'),
-                                  ],
-                                ),
+                                const SizedBox(height: kPadding4),
+                                const Text('#7 Ranked',
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(0, 0, 0, 0.6))),
                               ],
                             ),
                           );

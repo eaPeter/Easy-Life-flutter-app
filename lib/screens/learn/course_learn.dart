@@ -1,7 +1,7 @@
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/back_btn.dart';
+import '../../components/back_btn.dart';
 
 class CourseLearn extends StatelessWidget {
   const CourseLearn({super.key});

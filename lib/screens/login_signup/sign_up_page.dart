@@ -1,6 +1,6 @@
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/widgets/pass_txt_field.dart';
-import 'package:easy_life/widgets/txt_field.dart';
+import 'package:easy_life/components/pass_txt_field.dart';
+import 'package:easy_life/components/txt_field.dart';
 import 'package:flutter/material.dart';
 
 import 'default_auth_button.dart';

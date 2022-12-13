@@ -1,8 +1,8 @@
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/pass_txt_field.dart';
-import '../../widgets/txt_field.dart';
+import '../../components/pass_txt_field.dart';
+import '../../components/txt_field.dart';
 import 'default_auth_button.dart';
 
 class Login extends StatelessWidget {
