@@ -128,6 +128,7 @@ class DetailedLearnPage extends StatelessWidget {
                         itemCount: 10,
                         itemBuilder: (BuildContext context, index) {
                           return Container(
+                            padding: EdgeInsets.only(left: 6, top: 6, right: 6),
                             decoration: BoxDecoration(
                               border: Border.all(
                                   color: kColorTitleText.withOpacity(0.3)),
@@ -137,8 +138,31 @@ class DetailedLearnPage extends StatelessWidget {
                             child: Column(
                               children: [
                                 Container(
-                                  decoration: BoxDecoration(),
-                                )
+                                  width: double.infinity,
+                                  height: 120,
+                                  alignment: Alignment.topRight,
+                                  padding: const EdgeInsets.all(kPadding12),
+                                  decoration: const BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(3)),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/images/learn/Machine_learning_large.jpg'),
+                                        fit: BoxFit.fill),
+                                  ),
+                                  child: Container(
+                                    height: 32,
+                                    width: 32,
+                                    decoration: BoxDecoration(
+                                        color: kColorBackground,
+                                        border: Border.all(
+                                            color: kColorTitleText
+                                                .withOpacity(0.15)),
+                                        shape: BoxShape.circle),
+                                    child: const Icon(Icons.favorite_border,
+                                        size: 20),
+                                  ),
+                                ),
                               ],
                             ),
                           );
