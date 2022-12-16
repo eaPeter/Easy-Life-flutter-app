@@ -66,6 +66,7 @@ class _LearnState extends State<Learn> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kPadding20),
             child: Column(
@@ -116,9 +117,7 @@ class _LearnState extends State<Learn> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: kPadding24,
-                ),
+                const SizedBox(height: kPadding24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -129,6 +128,22 @@ class _LearnState extends State<Learn> {
                     ),
                   ],
                 ),
+                SizedBox(height: kPadding8),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: List.generate(
+                      5,
+                      (index) => CarouselComponent(
+                        image: "learn/neuro_Network.jpg",
+                        title: "Machine Learning - NLP ",
+                        subtitle: "Intermediate",
+                        star: '5.0',
+                      ),
+                    ),
+                  ),
+                ),
+
                 // CarouselSlider(
                 //   options: CarouselOptions(
                 //       height: 250.0, autoPlay: true, viewportFraction: 0.6),
@@ -151,67 +166,65 @@ class _LearnState extends State<Learn> {
                 const SizedBox(
                   height: kPadding24,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('Accounting', style: kTxtHeadingMainStyle),
-                    GestureDetector(
-                      onTap: (() => Navigator.pushNamed(context, '/see_all')),
-                      child: const Text('See all', style: kTxtSubTopicStyle),
-                    ),
-                  ],
-                ),
-                CarouselSlider(
-                  options: CarouselOptions(
-                      height: 250.0, autoPlay: true, viewportFraction: 0.6),
-                  items: [1, 2, 3, 4, 5].map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: const CarouselComponent(
-                            image: "learn/Accounting.jpg",
-                            title: "Advanced Mathematics Support Programme",
-                            subtitle: "Intermediate",
-                            star: '5.0',
-                          ),
-                        );
-                      },
-                    );
-                  }).toList(),
-                ),
-                const SizedBox(
-                  height: kPadding24,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('Neuro Network', style: kTxtHeadingMainStyle),
-                    GestureDetector(
-                      onTap: (() => Navigator.pushNamed(context, '/see_all')),
-                      child: const Text('See all', style: kTxtSubTopicStyle),
-                    ),
-                  ],
-                ),
-                CarouselSlider(
-                  options:
-                      CarouselOptions(height: 250.0, viewportFraction: 0.6),
-                  items: [1, 2, 3, 4, 5].map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: const CarouselComponent(
-                            image: "learn/neuro_Network.jpg",
-                            title: "Machine Learning - NLP ",
-                            subtitle: "Intermediate",
-                            star: '5.0',
-                          ),
-                        );
-                      },
-                    );
-                  }).toList(),
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     const Text('Accounting', style: kTxtHeadingMainStyle),
+                //     GestureDetector(
+                //       onTap: (() => Navigator.pushNamed(context, '/see_all')),
+                //       child: const Text('See all', style: kTxtSubTopicStyle),
+                //     ),
+                //   ],
+                // ),
+                // CarouselSlider(
+                //   options: CarouselOptions(
+                //       height: 250.0, autoPlay: true, viewportFraction: 0.6),
+                //   items: [1, 2, 3, 4, 5].map((i) {
+                //     return Builder(
+                //       builder: (BuildContext context) {
+                //         return SizedBox(
+                //           width: MediaQuery.of(context).size.width,
+                //           child: const CarouselComponent(
+                //             image: "learn/Accounting.jpg",
+                //             title: "Advanced Mathematics Support Programme",
+                //             subtitle: "Intermediate",
+                //             star: '5.0',
+                //           ),
+                //         );
+                //       },
+                //     );
+                //   }).toList(),
+                // ),
+                const SizedBox(height: kPadding24),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     const Text('Neuro Network', style: kTxtHeadingMainStyle),
+                //     GestureDetector(
+                //       onTap: (() => Navigator.pushNamed(context, '/see_all')),
+                //       child: const Text('See all', style: kTxtSubTopicStyle),
+                //     ),
+                //   ],
+                // ),
+                // CarouselSlider(
+                //   options:
+                //       CarouselOptions(height: 250.0, viewportFraction: 0.6),
+                //   items: [1, 2, 3, 4, 5].map((i) {
+                //     return Builder(
+                //       builder: (BuildContext context) {
+                //         return SizedBox(
+                //           width: MediaQuery.of(context).size.width,
+                //           child: const CarouselComponent(
+                //             image: "learn/neuro_Network.jpg",
+                //             title: "Machine Learning - NLP ",
+                //             subtitle: "Intermediate",
+                //             star: '5.0',
+                //           ),
+                //         );
+                //       },
+                //     );
+                //   }).toList(),
+                // ),
                 const SizedBox(height: kPadding16),
               ],
             ),
