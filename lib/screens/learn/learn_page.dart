@@ -129,25 +129,25 @@ class _LearnState extends State<Learn> {
                     ),
                   ],
                 ),
-                CarouselSlider(
-                  options: CarouselOptions(
-                      height: 250.0, autoPlay: true, viewportFraction: 0.6),
-                  items: [1, 2, 3, 4, 5].map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: const CarouselComponent(
-                            image: "learn/Machine_learning.jpg",
-                            title: "Educational Pathways International",
-                            subtitle: "Beginner",
-                            star: '5.0',
-                          ),
-                        );
-                      },
-                    );
-                  }).toList(),
-                ),
+                // CarouselSlider(
+                //   options: CarouselOptions(
+                //       height: 250.0, autoPlay: true, viewportFraction: 0.6),
+                //   items: [1, 2, 3, 4, 5].map((i) {
+                //     return Builder(
+                //       builder: (BuildContext context) {
+                //         return SizedBox(
+                //           width: MediaQuery.of(context).size.width,
+                //           child: const CarouselComponent(
+                //             image: "learn/Machine_learning.jpg",
+                //             title: "Educational Pathways International",
+                //             subtitle: "Beginner",
+                //             star: '5.0',
+                //           ),
+                //         );
+                //       },
+                //     );
+                //   }).toList(),
+                // ),
                 const SizedBox(
                   height: kPadding24,
                 ),
@@ -194,8 +194,8 @@ class _LearnState extends State<Learn> {
                   ],
                 ),
                 CarouselSlider(
-                  options: CarouselOptions(
-                      height: 250.0, autoPlay: true, viewportFraction: 0.6),
+                  options:
+                      CarouselOptions(height: 250.0, viewportFraction: 0.6),
                   items: [1, 2, 3, 4, 5].map((i) {
                     return Builder(
                       builder: (BuildContext context) {
