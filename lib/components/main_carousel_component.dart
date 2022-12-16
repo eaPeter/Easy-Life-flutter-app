@@ -19,7 +19,7 @@ class CarouselComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        margin: const EdgeInsets.only(right: kPadding12),
+        margin: const EdgeInsets.only(right: kPadding20),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
