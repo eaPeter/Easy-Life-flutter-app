@@ -66,7 +66,9 @@ class DrawerPage extends StatelessWidget {
                 buildMenuItem(
                   icon: Icons.logout_outlined,
                   text: 'Log out',
-                  navigate: () {},
+                  navigate: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
                 ),
               ],
             ),
