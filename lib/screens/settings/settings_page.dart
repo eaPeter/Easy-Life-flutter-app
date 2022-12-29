@@ -20,7 +20,29 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
             child: Column(
-              children: [],
+              children: [
+                const SizedBox(height: kPadding20),
+                Row(
+                  children: [
+                    Icon(Icons.person),
+                    const SizedBox(width: kPadding12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Account',
+                          style: kTxtTopicStyle,
+                        ),
+                        SizedBox(height: kPadding4),
+                        Text(
+                          'Change name, profile picture',
+                          style: kTxtOthersStyle,
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
             ),
           ),
         ),
