@@ -47,7 +47,7 @@ class SettingsPage extends StatelessWidget {
                     const SizedBox(height: kPadding16),
                     const Divider(thickness: 2),
                   ],
-                )
+                ),
               ],
             ),
           ),
