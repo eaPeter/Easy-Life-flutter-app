@@ -15,6 +15,7 @@ class DetailedLearnPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double pageWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: kColorBackground,
       body: SafeArea(
         child: SingleChildScrollView(
           controller: _controller,
