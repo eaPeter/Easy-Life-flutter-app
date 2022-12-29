@@ -21,41 +21,19 @@ class Notifications extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kPadding20),
-        child: SizedBox(
-          height: double.infinity,
+        child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: kPadding16,
+              Image.asset(
+                'assets/images/notifications/no_notifications.png',
+                height: 300,
+                width: 300,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  BackBtn(navigate: '/learn'),
-                  Text(
-                    'Notifications',
-                    style: kTxtHeadingLargeStyle,
-                  ),
-                  SizedBox(width: 45),
-                ],
-              ),
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/notifications/no_notifications.png',
-                      height: 300,
-                      width: 300,
-                    ),
-                    const SizedBox(height: kPadding24),
-                    const Text('No notifications yet!',
-                        style: kTxtHeadingMainStyle),
-                    const Text('Retry later to check for any new notifications',
-                        style: kTxtSubTopicStyle),
-                  ],
-                ),
-              )
+              const SizedBox(height: kPadding24),
+              const Text('No notifications yet!', style: kTxtHeadingMainStyle),
+              const Text('Retry later to check for any new notifications',
+                  style: kTxtSubTopicStyle),
             ],
           ),
         ),
