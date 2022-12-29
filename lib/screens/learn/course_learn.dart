@@ -9,6 +9,7 @@ class CourseLearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kColorBackground,
       body: SafeArea(
           child: Container(
         padding: const EdgeInsets.symmetric(horizontal: kPadding20),
