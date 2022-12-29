@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         '/course_learn': (context) => const CourseLearn(),
         '/drawer_page': (context) => const DrawerPage(),
         '/notifications': (context) => const Notifications(),
-        '/see_all': (context) => const SeeAll(),
+        '/see_all': (context) => SeeAll(),
       },
     );
   }
