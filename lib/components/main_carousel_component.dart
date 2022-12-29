@@ -8,16 +8,19 @@ class CarouselComponent extends StatelessWidget {
       required this.image,
       required this.title,
       required this.subtitle,
-      required this.star});
+      required this.star,
+      this.navigate});
 
   final String image;
   final String title;
   final String subtitle;
   final String star;
+  final Function? navigate;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: navigate,
       child: Container(
         margin: const EdgeInsets.only(right: kPadding20),
         child: Column(
