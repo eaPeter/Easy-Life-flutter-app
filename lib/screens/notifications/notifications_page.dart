@@ -1,5 +1,4 @@
 import 'package:easy_life/constants.dart';
-import 'package:easy_life/components/back_btn.dart';
 import 'package:flutter/material.dart';
 
 class Notifications extends StatelessWidget {
@@ -17,6 +16,7 @@ class Notifications extends StatelessWidget {
         centerTitle: true,
         backgroundColor: kColorBackground,
         elevation: 0,
+        iconTheme: const IconThemeData(color: kColorTitleText),
       ),
       body: SafeArea(
           child: Padding(
