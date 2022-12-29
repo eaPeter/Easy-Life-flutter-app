@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../components/icon_btn.dart';
 import '../constants.dart';
 
 class SeeAll extends StatelessWidget {
@@ -20,6 +19,13 @@ class SeeAll extends StatelessWidget {
         elevation: 0,
         iconTheme: const IconThemeData(color: kColorTitleText),
       ),
+      body: SafeArea(
+          child: Padding(
+        padding: EdgeInsets.symmetric(kPadding20),
+        child: SingleChildScrollView(
+          child: Column(),
+        ),
+      )),
     );
   }
 }
