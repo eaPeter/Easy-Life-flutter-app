@@ -49,7 +49,9 @@ class DrawerPage extends StatelessWidget {
                 buildMenuItem(
                   icon: Icons.settings_outlined,
                   text: 'Settings',
-                  navigate: () {},
+                  navigate: () {
+                    Navigator.pushNamed(context, '/settings');
+                  },
                 ),
                 const Divider(
                   thickness: 2.0,
