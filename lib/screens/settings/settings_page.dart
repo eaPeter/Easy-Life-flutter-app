@@ -22,11 +22,14 @@ class SettingsPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: const [
-                SizedBox(height: kPadding20),
                 SettingsPageComponent(
                     icon: Icon(Icons.person),
                     title: 'Account',
                     subTitle: 'Change name, profile picture'),
+                SettingsPageComponent(
+                    icon: Icon(Icons.camera),
+                    title: 'About',
+                    subTitle: 'Our mission, meet the team')
               ],
             ),
           ),
