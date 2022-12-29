@@ -9,13 +9,13 @@ class CarouselComponent extends StatelessWidget {
       required this.title,
       required this.subtitle,
       required this.star,
-      this.navigate});
+      required this.navigate});
 
   final String image;
   final String title;
   final String subtitle;
   final String star;
-  final Function? navigate;
+  final Function() navigate;
 
   @override
   Widget build(BuildContext context) {
