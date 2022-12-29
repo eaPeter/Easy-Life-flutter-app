@@ -9,6 +9,15 @@ class Notifications extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kColorBackground,
+      appBar: AppBar(
+        title: const Text(
+          'Notifications',
+          style: kTxtHeadingLargeStyle,
+        ),
+        centerTitle: true,
+        backgroundColor: kColorBackground,
+        elevation: 0,
+      ),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kPadding20),
