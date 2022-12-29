@@ -17,6 +17,7 @@ class SettingsPageComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: kPadding16),
         Row(
           children: [
             icon,
@@ -38,7 +39,7 @@ class SettingsPageComponent extends StatelessWidget {
           ],
         ),
         const SizedBox(height: kPadding16),
-        const Divider(thickness: 2),
+        const Divider(thickness: 1),
       ],
     );
   }
