@@ -1,3 +1,4 @@
+import 'package:easy_life/components/settings_page_component.dart';
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -20,34 +21,12 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
             child: Column(
-              children: [
-                const SizedBox(height: kPadding20),
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(Icons.person),
-                        const SizedBox(width: kPadding12),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Account',
-                              style: kTxtTopicStyle,
-                            ),
-                            SizedBox(height: kPadding4),
-                            Text(
-                              'Change name, profile picture',
-                              style: kTxtOthersStyle,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: kPadding16),
-                    const Divider(thickness: 2),
-                  ],
-                ),
+              children: const [
+                SizedBox(height: kPadding20),
+                SettingsPageComponent(
+                    icon: Icon(Icons.person),
+                    title: 'Account',
+                    subTitle: 'Change name, profile picture'),
               ],
             ),
           ),
