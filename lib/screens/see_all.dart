@@ -15,7 +15,7 @@ class SeeAll extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Accounting',
-          style: kTxtTopicStyle,
+          style: kTxtHeadingLargeStyle,
         ),
         centerTitle: true,
         backgroundColor: kColorBackground,
