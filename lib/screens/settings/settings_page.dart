@@ -22,24 +22,33 @@ class SettingsPage extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: kPadding20),
-                Row(
+                Column(
                   children: [
-                    Icon(Icons.person),
-                    const SizedBox(width: kPadding12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Account',
-                          style: kTxtTopicStyle,
-                        ),
-                        SizedBox(height: kPadding4),
-                        Text(
-                          'Change name, profile picture',
-                          style: kTxtOthersStyle,
-                        ),
+                    Row(
+                      children: [
+                        const Icon(Icons.person),
+                        const SizedBox(width: kPadding12),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Account',
+                              style: kTxtTopicStyle,
+                            ),
+                            SizedBox(height: kPadding4),
+                            Text(
+                              'Change name, profile picture',
+                              style: kTxtOthersStyle,
+                            ),
+                          ],
+                        )
                       ],
-                    )
+                    ),
+                    const SizedBox(height: kPadding20),
+                    const Divider(
+                      height: 10,
+                      thickness: 10,
+                    ),
                   ],
                 )
               ],
