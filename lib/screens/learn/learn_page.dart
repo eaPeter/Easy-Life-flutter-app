@@ -22,6 +22,7 @@ class _LearnState extends State<Learn> {
     final fullWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: kColorBackground,
       drawer: const DrawerPage(),
       appBar: AppBar(
           backgroundColor: kColorBackground,
