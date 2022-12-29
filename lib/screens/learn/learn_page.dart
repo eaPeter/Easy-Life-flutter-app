@@ -134,11 +134,13 @@ class _LearnState extends State<Learn> {
                   child: Row(
                     children: List.generate(
                       5,
-                      (index) => const CarouselComponent(
+                      (index) => CarouselComponent(
                         image: "learn/neuro_Network.jpg",
                         title: "Machine Learning - NLP ",
                         subtitle: "Intermediate",
                         star: '5.0',
+                        navigate: () =>
+                            Navigator.pushNamed(context, '/detailed_learn'),
                       ),
                     ),
                   ),
@@ -160,11 +162,13 @@ class _LearnState extends State<Learn> {
                   child: Row(
                     children: List.generate(
                       5,
-                      (index) => const CarouselComponent(
+                      (index) => CarouselComponent(
                         image: "learn/Accounting.jpg",
                         title: "Advanced Mathematics Support Programme",
                         subtitle: "Intermediate",
                         star: '5.0',
+                        navigate: () =>
+                            Navigator.pushNamed(context, '/detailed_learn'),
                       ),
                     ),
                   ),
@@ -186,11 +190,13 @@ class _LearnState extends State<Learn> {
                   child: Row(
                     children: List.generate(
                       5,
-                      (index) => const CarouselComponent(
+                      (index) => CarouselComponent(
                         image: "learn/neuro_Network.jpg",
                         title: "Advanced Mathematics Support Programme",
                         subtitle: "Intermediate",
                         star: '5.0',
+                        navigate: () =>
+                            Navigator.pushNamed(context, '/detailed_learn'),
                       ),
                     ),
                   ),
