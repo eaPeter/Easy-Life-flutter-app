@@ -80,7 +80,7 @@ class DrawerPage extends StatelessWidget {
 Widget buildMenuItem({
   required IconData icon,
   required String text,
-  required Function navigate,
+  required Function() navigate,
 }) {
   return ListTile(
     leading: Icon(icon),
@@ -90,7 +90,7 @@ Widget buildMenuItem({
         fontSize: 16,
       ),
     ),
-    onTap: () => navigate,
+    onTap: navigate,
   );
 }
 
