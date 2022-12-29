@@ -29,7 +29,23 @@ class SettingsPage extends StatelessWidget {
                 SettingsPageComponent(
                     icon: Icon(Icons.camera),
                     title: 'About',
-                    subTitle: 'Our mission, meet the team')
+                    subTitle: 'Our mission, meet the team'),
+                SettingsPageComponent(
+                    icon: Icon(Icons.notifications),
+                    title: 'Notifications',
+                    subTitle: 'View all your notifications'),
+                SettingsPageComponent(
+                    icon: Icon(Icons.help),
+                    title: 'Help',
+                    subTitle: 'Get help with any difficulty you are facing'),
+                SettingsPageComponent(
+                    icon: Icon(
+                      Icons.delete,
+                      color: Colors.red,
+                    ),
+                    title: 'Delete account',
+                    subTitle:
+                        "Don’t want to use this account anymore? Delete it!"),
               ],
             ),
           ),
