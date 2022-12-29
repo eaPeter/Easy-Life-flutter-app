@@ -9,6 +9,7 @@ class SeeAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kColorBackground,
       appBar: AppBar(
         title: const Text(
           'See All',
