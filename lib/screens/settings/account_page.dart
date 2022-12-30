@@ -36,7 +36,22 @@ class AccountPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
-            child: Column(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/profile_pic1.jpg'),
+                    ),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: kColorTextLight),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
