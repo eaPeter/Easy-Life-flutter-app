@@ -39,7 +39,10 @@ class SettingsPage extends StatelessWidget {
                     title: 'Help',
                     subTitle: 'Get help with any difficulty you are facing'),
                 SettingsPageComponent(
-                    icon: Icon(Icons.delete),
+                    icon: Icon(
+                      Icons.delete,
+                      color: Colors.red,
+                    ),
                     title: 'Delete account',
                     subTitle:
                         "Don’t want to use this account anymore? Delete it!"),
