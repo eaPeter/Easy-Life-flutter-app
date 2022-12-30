@@ -38,7 +38,9 @@ class SettingsPageComponent extends StatelessWidget {
                   const SizedBox(height: kPadding4),
                   Text(
                     subTitle,
-                    style: kTxtOthersStyle,
+                    style: (color == kColorTitleText)
+                        ? kTxtOthersStyle
+                        : Colors.red.withOpacity(0.6),
                   ),
                 ],
               )
