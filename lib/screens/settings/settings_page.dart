@@ -1,4 +1,3 @@
-import 'package:easy_life/components/default_button.dart';
 import 'package:easy_life/components/settings_page_component.dart';
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
