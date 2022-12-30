@@ -14,35 +14,39 @@ class SettingsPageComponent extends StatelessWidget {
   final String title;
   final String subTitle;
   final Color? color;
+  final Function() navigate;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: kPadding16),
-        Row(
-          children: [
-            icon,
-            const SizedBox(width: kPadding12),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: kTxtTopicStyle.copyWith(color: color),
-                ),
-                const SizedBox(height: kPadding4),
-                Text(
-                  subTitle,
-                  style: kTxtOthersStyle,
-                ),
-              ],
-            )
-          ],
-        ),
-        const SizedBox(height: kPadding16),
-        const Divider(thickness: 1),
-      ],
+    return GestureDetector(
+      onTap: ,
+      child: Column(
+        children: [
+          const SizedBox(height: kPadding16),
+          Row(
+            children: [
+              icon,
+              const SizedBox(width: kPadding12),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: kTxtTopicStyle.copyWith(color: color),
+                  ),
+                  const SizedBox(height: kPadding4),
+                  Text(
+                    subTitle,
+                    style: kTxtOthersStyle,
+                  ),
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: kPadding16),
+          const Divider(thickness: 1),
+        ],
+      ),
     );
   }
 }
