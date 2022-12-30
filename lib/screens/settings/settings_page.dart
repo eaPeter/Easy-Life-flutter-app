@@ -20,59 +20,62 @@ class SettingsPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Column(
-                  children: const [
-                    SettingsPageComponent(
-                        icon: Icon(Icons.person),
-                        title: 'Account',
-                        subTitle: 'Change name, profile picture'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.camera),
-                        title: 'About',
-                        subTitle: 'Our mission, meet the team'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.notifications),
-                        title: 'Notifications',
-                        subTitle: 'View all your notifications'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.help),
-                        title: 'Help',
-                        subTitle:
-                            'Get help with any difficulty you are facing'),
-                    SettingsPageComponent(
-                        color: Colors.red,
-                        icon: Icon(
-                          Icons.delete,
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height - 140,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: const [
+                      SettingsPageComponent(
+                          icon: Icon(Icons.person),
+                          title: 'Account',
+                          subTitle: 'Change name, profile picture'),
+                      SettingsPageComponent(
+                          icon: Icon(Icons.camera),
+                          title: 'About',
+                          subTitle: 'Our mission, meet the team'),
+                      SettingsPageComponent(
+                          icon: Icon(Icons.notifications),
+                          title: 'Notifications',
+                          subTitle: 'View all your notifications'),
+                      SettingsPageComponent(
+                          icon: Icon(Icons.help),
+                          title: 'Help',
+                          subTitle:
+                              'Get help with any difficulty you are facing'),
+                      SettingsPageComponent(
                           color: Colors.red,
-                        ),
-                        title: 'Delete account',
-                        subTitle:
-                            "Don’t want to use this account anymore? Delete it!"),
-                  ],
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 52,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: kColorTitleText, width: 2),
+                          icon: Icon(
+                            Icons.delete,
+                            color: Colors.red,
+                          ),
+                          title: 'Delete account',
+                          subTitle:
+                              "Don’t want to use this account anymore? Delete it!"),
+                    ],
                   ),
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(kColorBackground),
+                  // const Spacer(),
+                  Container(
+                    width: double.infinity,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: kColorTitleText, width: 2),
                     ),
-                    onPressed: () => Navigator.pushNamed(context, '/'),
-                    child: Text(
-                      'Log out',
-                      style: kTxtBtnStyle.copyWith(color: kColorTitleText),
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(kColorBackground),
+                      ),
+                      onPressed: () => Navigator.pushNamed(context, '/'),
+                      child: Text(
+                        'Log out',
+                        style: kTxtBtnStyle.copyWith(color: kColorTitleText),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: kPadding24),
-              ],
+                ],
+              ),
             ),
           ),
         ),
