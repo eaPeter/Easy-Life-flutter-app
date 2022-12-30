@@ -22,7 +22,7 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Column(
                   children: const [
@@ -72,7 +72,7 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: kPadding24)
+                const SizedBox(height: kPadding24),
               ],
             ),
           ),
