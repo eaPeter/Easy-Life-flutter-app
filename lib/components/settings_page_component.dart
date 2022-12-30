@@ -8,18 +8,19 @@ class SettingsPageComponent extends StatelessWidget {
       required this.icon,
       required this.title,
       required this.subTitle,
-      this.color = kColorTitleText});
+      this.color = kColorTitleText,
+      this.navigate});
 
   final Icon icon;
   final String title;
   final String subTitle;
   final Color? color;
-  final Function() navigate;
+  final Function()? navigate;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ,
+      onTap: navigate,
       child: Column(
         children: [
           const SizedBox(height: kPadding16),
