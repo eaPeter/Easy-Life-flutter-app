@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 const kColorBackground = Color.fromARGB(255, 255, 255, 255);
 const kColorTitleText = Color.fromARGB(255, 1, 0, 44);
 const kColorBodyText = Color.fromARGB(255, 0, 2, 7);
-const kColorTextLight = Color.fromARGB(255, 77, 80, 94);
+const kColorTextLight = Color.fromARGB(199, 77, 80, 94);
 const kColorPrimary = Color.fromARGB(255, 40, 48, 84);
 const kColorBlue = Color.fromARGB(255, 0, 39, 182);
 const kColorRed = Color.fromARGB(255, 222, 0, 0);
