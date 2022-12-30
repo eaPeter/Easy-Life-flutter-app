@@ -9,8 +9,25 @@ class AccountPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kColorBackground,
       appBar: AppBar(
-        title: const Text('Settings', style: kTxtHeadingMainStyle),
+        title: const Text('Account', style: kTxtHeadingMainStyle),
         centerTitle: true,
+        actions: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: kPadding20),
+                child: GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/account'),
+                  child: Text(
+                    'Save',
+                    style: kTxtTopicStyle.copyWith(color: kColorBlue),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
         backgroundColor: kColorBackground,
         elevation: 0,
         iconTheme: const IconThemeData(color: kColorTitleText),
