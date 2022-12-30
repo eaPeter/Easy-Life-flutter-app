@@ -88,11 +88,12 @@ class AccountPage extends StatelessWidget {
                       ),
                       const SizedBox(height: kPadding16),
                       FormBuilderTextField(
-                        name: 'full_name',
+                        name: 'email',
                         decoration: InputDecoration(
-                          hintText: 'Full name'.toUpperCase(),
+                          hintText: 'Email address'.toUpperCase(),
                           border: const OutlineInputBorder(),
                         ),
+                        keyboardType: TextInputType.emailAddress,
                       ),
                     ],
                   ),
