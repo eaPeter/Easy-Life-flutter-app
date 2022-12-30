@@ -39,6 +39,7 @@ class SettingsPage extends StatelessWidget {
                     title: 'Help',
                     subTitle: 'Get help with any difficulty you are facing'),
                 SettingsPageComponent(
+                    color: Colors.red,
                     icon: Icon(
                       Icons.delete,
                       color: Colors.red,
