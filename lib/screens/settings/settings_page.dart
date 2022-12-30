@@ -26,7 +26,7 @@ class SettingsPage extends StatelessWidget {
                 Column(
                   children: [
                     ListTile(
-                      onTap: () => Navigator.pushNamed(context, '/acccount'),
+                      onTap: () => Navigator.pushNamed(context, '/account'),
                       leading: const Icon(
                         Icons.person,
                         color: kColorTitleText,
