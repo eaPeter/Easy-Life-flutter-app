@@ -43,12 +43,17 @@ class AccountPage extends StatelessWidget {
                   height: 100,
                   width: 100,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/images/profile_pic1.jpg'),
                     ),
                     shape: BoxShape.circle,
                     border: Border.all(color: kColorTextLight),
                   ),
+                ),
+                const SizedBox(height: kPadding12),
+                Text(
+                  'Change profile picture',
+                  style: kTxtSubTopicStyle.copyWith(color: kColorBlue),
                 )
               ],
             ),
