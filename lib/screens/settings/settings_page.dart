@@ -30,7 +30,8 @@ class SettingsPage extends StatelessWidget {
                       SettingsPageComponent(
                           icon: Icon(Icons.person),
                           title: 'Account',
-                          subTitle: 'Change name, profile picture'),
+                          subTitle: 'Change name, profile picture',
+                          navigate: '/account'),
                       SettingsPageComponent(
                           icon: Icon(Icons.camera),
                           title: 'About',
