@@ -55,7 +55,6 @@ class SettingsPage extends StatelessWidget {
                               "Don’t want to use this account anymore? Delete it!"),
                     ],
                   ),
-                  // const Spacer(),
                   Container(
                     width: double.infinity,
                     height: 52,
