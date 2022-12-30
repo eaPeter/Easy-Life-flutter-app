@@ -59,8 +59,9 @@ class AccountPage extends StatelessWidget {
                   'Change profile picture',
                   style: kTxtSubTopicStyle.copyWith(color: kColorBlue),
                 ),
+                const SizedBox(height: kPadding32),
                 TxtField(
-                  title: 'Email address',
+                  title: 'Full name',
                   hint: 'Enter your email address',
                   txtController: _emailController,
                 ),
