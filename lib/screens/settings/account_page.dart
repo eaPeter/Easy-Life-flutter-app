@@ -1,5 +1,6 @@
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import '../../components/txt_field.dart';
@@ -79,6 +80,15 @@ class AccountPage extends StatelessWidget {
                       ),
                       const SizedBox(height: kPadding16),
                       FormBuilderTextField(
+                        name: 'email',
+                        decoration: InputDecoration(
+                          hintText: 'Email address'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+                      ),
+                      const SizedBox(height: kPadding16),
+                      FormBuilderTextField(
                         name: 'phone_number',
                         decoration: InputDecoration(
                           hintText: 'Phone number'.toUpperCase(),
@@ -88,12 +98,12 @@ class AccountPage extends StatelessWidget {
                       ),
                       const SizedBox(height: kPadding16),
                       FormBuilderTextField(
-                        name: 'email',
+                        name: 'whatsapp_number',
                         decoration: InputDecoration(
-                          hintText: 'Email address'.toUpperCase(),
+                          hintText: 'Whatsapp number'.toUpperCase(),
                           border: const OutlineInputBorder(),
                         ),
-                        keyboardType: TextInputType.emailAddress,
+                        keyboardType: TextInputType.phone,
                       ),
                     ],
                   ),
