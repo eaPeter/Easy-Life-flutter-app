@@ -7,11 +7,13 @@ class SettingsPageComponent extends StatelessWidget {
       {super.key,
       required this.icon,
       required this.title,
-      required this.subTitle});
+      required this.subTitle,
+      this.color = kColorTitleText});
 
   final Icon icon;
   final String title;
   final String subTitle;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class SettingsPageComponent extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: kTxtTopicStyle,
+                  style: kTxtTopicStyle.copyWith(color: color),
                 ),
                 const SizedBox(height: kPadding4),
                 Text(
