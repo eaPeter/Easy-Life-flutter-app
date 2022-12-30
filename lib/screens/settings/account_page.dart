@@ -1,12 +1,11 @@
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import '../../components/txt_field.dart';
 
 class AccountPage extends StatelessWidget {
-  AccountPage({super.key});
-
-  final TextEditingController _emailController = TextEditingController();
+  const AccountPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +59,26 @@ class AccountPage extends StatelessWidget {
                   style: kTxtSubTopicStyle.copyWith(color: kColorBlue),
                 ),
                 const SizedBox(height: kPadding32),
-                TxtField(
-                  title: 'Full name',
-                  hint: 'Enter your email address',
-                  txtController: _emailController,
-                ),
+                FormBuilder(
+                    child: Column(
+                  children: [
+                    FormBuilderTextField(
+                      name: 'full_name',
+                      decoration: InputDecoration(
+                        hintText: 'Full name'.toUpperCase(),
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: kPadding16),
+                    FormBuilderTextField(
+                      name: 'full_name',
+                      decoration: InputDecoration(
+                        hintText: 'Full name'.toUpperCase(),
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                  ],
+                ))
               ],
             ),
           ),
