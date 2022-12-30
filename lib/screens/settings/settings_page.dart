@@ -24,7 +24,7 @@ class SettingsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  children: const [
+                  children: [
                     SettingsPageComponent(
                         icon: Icon(Icons.person),
                         title: 'Account',
@@ -53,6 +53,7 @@ class SettingsPage extends StatelessWidget {
                         subTitle:
                             "Don’t want to use this account anymore? Delete it!"),
                     ListTile(
+                      onTap: () => Navigator.pushNamed(context, '/'),
                       leading: Icon(
                         Icons.person,
                         color: kColorTitleText,
@@ -63,6 +64,22 @@ class SettingsPage extends StatelessWidget {
                       ),
                       subtitle: Text(
                         'Change name, profile picture',
+                        style: kTxtOthersStyle,
+                      ),
+                      horizontalTitleGap: 1,
+                    ),
+                    ListTile(
+                      onTap: () => Navigator.pushNamed(context, '/'),
+                      leading: Icon(
+                        Icons.camera,
+                        color: kColorTitleText,
+                      ),
+                      title: Text(
+                        'About',
+                        style: kTxtTopicStyle,
+                      ),
+                      subtitle: Text(
+                        'Our mission, meet the team',
                         style: kTxtOthersStyle,
                       ),
                       horizontalTitleGap: 1,
