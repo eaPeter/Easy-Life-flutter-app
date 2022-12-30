@@ -17,7 +17,7 @@ class SettingsPageComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: kPadding16),
+        const SizedBox(height: kPadding16),
         Row(
           children: [
             icon,
