@@ -40,10 +40,8 @@ class SettingsPageComponent extends StatelessWidget {
                     subTitle,
                     style: kTxtOthersStyle.copyWith(
                       color: (color == kColorTitleText)
-                          ? kColorTitleText
-                          : Colors.red.withOpacity(
-                              0.6,
-                            ),
+                          ? kColorTextLight
+                          : Colors.red.withOpacity(0.6),
                     ),
                   ),
                 ],
