@@ -60,25 +60,43 @@ class AccountPage extends StatelessWidget {
                 ),
                 const SizedBox(height: kPadding32),
                 FormBuilder(
-                    child: Column(
-                  children: [
-                    FormBuilderTextField(
-                      name: 'full_name',
-                      decoration: InputDecoration(
-                        hintText: 'Full name'.toUpperCase(),
-                        border: const OutlineInputBorder(),
+                  child: Column(
+                    children: [
+                      FormBuilderTextField(
+                        name: 'full_name',
+                        decoration: InputDecoration(
+                          hintText: 'Full name'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: kPadding16),
-                    FormBuilderTextField(
-                      name: 'full_name',
-                      decoration: InputDecoration(
-                        hintText: 'Full name'.toUpperCase(),
-                        border: const OutlineInputBorder(),
+                      const SizedBox(height: kPadding16),
+                      FormBuilderTextField(
+                        name: 'username',
+                        decoration: InputDecoration(
+                          hintText: 'User name'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
                       ),
-                    ),
-                  ],
-                ))
+                      const SizedBox(height: kPadding16),
+                      FormBuilderTextField(
+                        name: 'phone_number',
+                        decoration: InputDecoration(
+                          hintText: 'Phone number'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
+                        keyboardType: TextInputType.phone,
+                      ),
+                      const SizedBox(height: kPadding16),
+                      FormBuilderTextField(
+                        name: 'full_name',
+                        decoration: InputDecoration(
+                          hintText: 'Full name'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
