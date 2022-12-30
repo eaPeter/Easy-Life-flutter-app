@@ -25,65 +25,93 @@ class SettingsPage extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    SettingsPageComponent(
-                        icon: Icon(Icons.person),
-                        title: 'Account',
-                        subTitle: 'Change name, profile picture',
-                        navigate: '/account'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.camera),
-                        title: 'About',
-                        subTitle: 'Our mission, meet the team'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.notifications),
-                        title: 'Notifications',
-                        subTitle: 'View all your notifications'),
-                    SettingsPageComponent(
-                        icon: Icon(Icons.help),
-                        title: 'Help',
-                        subTitle:
-                            'Get help with any difficulty you are facing'),
-                    SettingsPageComponent(
-                        color: Colors.red,
-                        icon: Icon(
-                          Icons.delete,
-                          color: Colors.red,
-                        ),
-                        title: 'Delete account',
-                        subTitle:
-                            "Don’t want to use this account anymore? Delete it!"),
                     ListTile(
-                      onTap: () => Navigator.pushNamed(context, '/'),
-                      leading: Icon(
+                      onTap: () => Navigator.pushNamed(context, '/acccount'),
+                      leading: const Icon(
                         Icons.person,
                         color: kColorTitleText,
                       ),
-                      title: Text(
+                      title: const Text(
                         'Account',
                         style: kTxtTopicStyle,
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         'Change name, profile picture',
                         style: kTxtOthersStyle,
                       ),
                       horizontalTitleGap: 1,
                     ),
+                    const Divider(thickness: 1),
                     ListTile(
                       onTap: () => Navigator.pushNamed(context, '/'),
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.camera,
                         color: kColorTitleText,
                       ),
-                      title: Text(
+                      title: const Text(
                         'About',
                         style: kTxtTopicStyle,
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         'Our mission, meet the team',
                         style: kTxtOthersStyle,
                       ),
                       horizontalTitleGap: 1,
                     ),
+                    const Divider(thickness: 1),
+                    ListTile(
+                      onTap: () =>
+                          Navigator.pushNamed(context, '/notifications'),
+                      leading: const Icon(
+                        Icons.notifications,
+                        color: kColorTitleText,
+                      ),
+                      title: const Text(
+                        'Notifications',
+                        style: kTxtTopicStyle,
+                      ),
+                      subtitle: const Text(
+                        'View all your notifications',
+                        style: kTxtOthersStyle,
+                      ),
+                      horizontalTitleGap: 1,
+                    ),
+                    const Divider(thickness: 1),
+                    ListTile(
+                      onTap: () => Navigator.pushNamed(context, '/'),
+                      leading: const Icon(
+                        Icons.camera,
+                        color: kColorTitleText,
+                      ),
+                      title: const Text(
+                        'Help',
+                        style: kTxtTopicStyle,
+                      ),
+                      subtitle: const Text(
+                        'Get help with any difficulty you are facing',
+                        style: kTxtOthersStyle,
+                      ),
+                      horizontalTitleGap: 1,
+                    ),
+                    const Divider(thickness: 1),
+                    ListTile(
+                      onTap: () => Navigator.pushNamed(context, '/'),
+                      leading: const Icon(
+                        Icons.delete,
+                        color: Colors.red,
+                      ),
+                      title: Text(
+                        'Delete',
+                        style: kTxtTopicStyle.copyWith(color: Colors.red),
+                      ),
+                      subtitle: Text(
+                        "Don’t want to use this account anymore? Delete it!",
+                        style: kTxtOthersStyle.copyWith(
+                            color: Colors.red.withOpacity(0.6)),
+                      ),
+                      horizontalTitleGap: 1,
+                    ),
+                    const Divider(thickness: 1),
                   ],
                 ),
                 Container(
