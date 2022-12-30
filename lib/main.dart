@@ -1,4 +1,5 @@
 import 'package:easy_life/screens/learn/course_learn.dart';
+import 'package:easy_life/screens/settings/account_page.dart';
 import 'package:easy_life/screens/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/notifications': (context) => const Notifications(),
         '/see_all': (context) => SeeAll(),
         '/settings': (context) => const SettingsPage(),
+        '/account': (context) => const AccountPage(),
       },
     );
   }
