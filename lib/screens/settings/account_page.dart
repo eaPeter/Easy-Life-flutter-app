@@ -1,8 +1,12 @@
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/txt_field.dart';
+
 class AccountPage extends StatelessWidget {
-  const AccountPage({super.key});
+  AccountPage({super.key});
+
+  final TextEditingController _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +58,12 @@ class AccountPage extends StatelessWidget {
                 Text(
                   'Change profile picture',
                   style: kTxtSubTopicStyle.copyWith(color: kColorBlue),
-                )
+                ),
+                TxtField(
+                  title: 'Email address',
+                  hint: 'Enter your email address',
+                  txtController: _emailController,
+                ),
               ],
             ),
           ),
