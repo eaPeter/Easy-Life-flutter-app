@@ -10,7 +10,9 @@ class AccountPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
-          child: SingleChildScrollView(child: Column()),
+          child: SingleChildScrollView(
+            child: Column(),
+          ),
         ),
       ),
     );
