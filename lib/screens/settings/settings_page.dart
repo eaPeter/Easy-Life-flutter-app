@@ -21,32 +21,37 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           child: SingleChildScrollView(
             child: Column(
-              children: const [
-                SettingsPageComponent(
-                    icon: Icon(Icons.person),
-                    title: 'Account',
-                    subTitle: 'Change name, profile picture'),
-                SettingsPageComponent(
-                    icon: Icon(Icons.camera),
-                    title: 'About',
-                    subTitle: 'Our mission, meet the team'),
-                SettingsPageComponent(
-                    icon: Icon(Icons.notifications),
-                    title: 'Notifications',
-                    subTitle: 'View all your notifications'),
-                SettingsPageComponent(
-                    icon: Icon(Icons.help),
-                    title: 'Help',
-                    subTitle: 'Get help with any difficulty you are facing'),
-                SettingsPageComponent(
-                    color: Colors.red,
-                    icon: Icon(
-                      Icons.delete,
-                      color: Colors.red,
-                    ),
-                    title: 'Delete account',
-                    subTitle:
-                        "Don’t want to use this account anymore? Delete it!"),
+              children: [
+                Column(
+                  children: const [
+                    SettingsPageComponent(
+                        icon: Icon(Icons.person),
+                        title: 'Account',
+                        subTitle: 'Change name, profile picture'),
+                    SettingsPageComponent(
+                        icon: Icon(Icons.camera),
+                        title: 'About',
+                        subTitle: 'Our mission, meet the team'),
+                    SettingsPageComponent(
+                        icon: Icon(Icons.notifications),
+                        title: 'Notifications',
+                        subTitle: 'View all your notifications'),
+                    SettingsPageComponent(
+                        icon: Icon(Icons.help),
+                        title: 'Help',
+                        subTitle:
+                            'Get help with any difficulty you are facing'),
+                    SettingsPageComponent(
+                        color: Colors.red,
+                        icon: Icon(
+                          Icons.delete,
+                          color: Colors.red,
+                        ),
+                        title: 'Delete account',
+                        subTitle:
+                            "Don’t want to use this account anymore? Delete it!"),
+                  ],
+                ),
               ],
             ),
           ),
