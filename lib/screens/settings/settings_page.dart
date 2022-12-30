@@ -1,3 +1,4 @@
+import 'package:easy_life/components/default_button.dart';
 import 'package:easy_life/components/settings_page_component.dart';
 import 'package:easy_life/constants.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +52,24 @@ class SettingsPage extends StatelessWidget {
                         subTitle:
                             "Don’t want to use this account anymore? Delete it!"),
                   ],
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 52,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: kColorTitleText, width: 2),
+                  ),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(kColorBackground),
+                    ),
+                    onPressed: () => Navigator.pushNamed(context, '/'),
+                    child: Text(
+                      'Log out',
+                      style: kTxtBtnStyle.copyWith(color: kColorTitleText),
+                    ),
+                  ),
                 ),
               ],
             ),
