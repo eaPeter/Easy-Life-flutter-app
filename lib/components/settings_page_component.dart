@@ -15,12 +15,12 @@ class SettingsPageComponent extends StatelessWidget {
   final String title;
   final String subTitle;
   final Color? color;
-  final Function()? navigate;
+  final String? navigate;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: navigate,
+      onTap: (() => Navigator.pushNamed(context, navigate ?? '')),
       child: Column(
         children: [
           const SizedBox(height: kPadding16),
