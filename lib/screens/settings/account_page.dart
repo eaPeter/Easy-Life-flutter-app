@@ -43,6 +43,7 @@ class AccountPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const SizedBox(height: kPadding20),
                 Container(
                   height: 100,
                   width: 100,
@@ -104,6 +105,14 @@ class AccountPage extends StatelessWidget {
                           border: const OutlineInputBorder(),
                         ),
                         keyboardType: TextInputType.phone,
+                      ),
+                      const SizedBox(height: kPadding16),
+                      FormBuilderTextField(
+                        name: 'telegram_handle',
+                        decoration: InputDecoration(
+                          hintText: 'Telegram handle'.toUpperCase(),
+                          border: const OutlineInputBorder(),
+                        ),
                       ),
                     ],
                   ),
