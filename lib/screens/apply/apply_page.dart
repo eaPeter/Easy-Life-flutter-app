@@ -32,12 +32,12 @@ class ApplyPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: kPadding20),
+            padding: const EdgeInsets.symmetric(horizontal: kPadding20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: kPadding24),
-                const Text('Seek Knowledge', style: kTxtHeadingLargeStyle),
+                const Text('Many Opportunities', style: kTxtHeadingLargeStyle),
                 const SizedBox(height: kPadding20),
                 Row(
                   children: [
@@ -85,7 +85,7 @@ class ApplyPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Machine Learning', style: kTxtHeadingMainStyle),
+                    const Text('Scholarships', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
                       child: const Text('See all', style: kTxtSubTopicStyle),
@@ -113,7 +113,7 @@ class ApplyPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Accounting', style: kTxtHeadingMainStyle),
+                    const Text('Jobs', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
                       child: const Text('See all', style: kTxtSubTopicStyle),
@@ -141,7 +141,7 @@ class ApplyPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Neuro Network', style: kTxtHeadingMainStyle),
+                    const Text('Opportunities', style: kTxtHeadingMainStyle),
                     GestureDetector(
                       onTap: (() => Navigator.pushNamed(context, '/see_all')),
                       child: const Text('See all', style: kTxtSubTopicStyle),
