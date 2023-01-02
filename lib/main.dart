@@ -1,3 +1,4 @@
+import 'package:easy_life/screens/apply/apply_page.dart';
 import 'package:easy_life/screens/learn/course_learn.dart';
 import 'package:easy_life/screens/settings/account_page.dart';
 import 'package:easy_life/screens/settings/settings_page.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
         '/learn': (context) => const Learn(),
+        '/apply': (context) => const ApplyPage(),
         '/detailed_learn': (context) => DetailedLearnPage(),
         '/course_learn': (context) => const CourseLearn(),
         '/drawer_page': (context) => const DrawerPage(),
