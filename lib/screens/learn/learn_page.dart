@@ -25,17 +25,18 @@ class _LearnState extends State<Learn> {
       backgroundColor: kColorBackground,
       drawer: const DrawerPage(),
       appBar: AppBar(
-          backgroundColor: kColorBackground,
-          elevation: 0,
-          iconTheme: const IconThemeData(color: kColorTitleText),
-          actions: const [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: kPadding20),
-              child: IconBtn(
-                  iconChoice: Icon(Icons.notifications_outlined),
-                  navigate: '/notifications'),
-            ),
-          ]),
+        backgroundColor: kColorBackground,
+        elevation: 0,
+        iconTheme: const IconThemeData(color: kColorTitleText),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: kPadding20),
+            child: IconBtn(
+                iconChoice: Icon(Icons.notifications_outlined),
+                navigate: '/notifications'),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         onTap: (value) {
