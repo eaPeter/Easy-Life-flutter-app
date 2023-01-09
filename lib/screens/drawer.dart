@@ -46,13 +46,13 @@ class DrawerPage extends StatelessWidget {
                   navigate: () {},
                 ),
                 const SizedBox(height: 10),
-                buildMenuItem(
-                  icon: Icons.settings_outlined,
-                  text: 'Settings',
-                  navigate: () {
-                    Navigator.pushNamed(context, '/settings');
-                  },
-                ),
+                // buildMenuItem(
+                //   icon: Icons.settings_outlined,
+                //   text: 'Settings',
+                //   navigate: () {
+                //     Navigator.pushNamed(context, '/settings');
+                //   },
+                // ),
                 const Divider(
                   thickness: 2.0,
                 ),
