@@ -14,21 +14,6 @@ class ApplyPage extends StatelessWidget {
     final fullWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: kColorBackground,
-      drawer: const DrawerPage(),
-      appBar: AppBar(
-        backgroundColor: kColorBackground,
-        elevation: 0,
-        iconTheme: const IconThemeData(color: kColorTitleText),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: kPadding20),
-            child: IconBtn(
-                iconChoice: Icon(Icons.notifications_outlined),
-                navigate: '/notifications'),
-          ),
-        ],
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
