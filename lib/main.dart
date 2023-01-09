@@ -1,8 +1,3 @@
-import 'package:easy_life/screens/apply/apply_page.dart';
-import 'package:easy_life/screens/homepage.dart';
-import 'package:easy_life/screens/learn/course_learn.dart';
-import 'package:easy_life/screens/settings/account_page.dart';
-import 'package:easy_life/screens/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 
 //import screens
@@ -14,6 +9,11 @@ import 'package:easy_life/screens/learn/detailed_learn_page.dart';
 import 'package:easy_life/screens/see_all.dart';
 import 'screens/drawer.dart';
 import 'screens/learn/learn_page.dart';
+import 'package:easy_life/screens/apply/apply_page.dart';
+import 'package:easy_life/screens/homepage.dart';
+import 'package:easy_life/screens/learn/course_learn.dart';
+import 'package:easy_life/screens/settings/account_page.dart';
+import 'package:easy_life/screens/settings/settings_page.dart';
 
 void main() {
   runApp(const MyApp());
