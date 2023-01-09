@@ -5,16 +5,14 @@ import 'package:easy_life/components/icon_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../drawer.dart';
-
-class Learn extends StatefulWidget {
-  const Learn({super.key});
+class LearnPage extends StatefulWidget {
+  const LearnPage({super.key});
 
   @override
-  State<Learn> createState() => _LearnState();
+  State<LearnPage> createState() => _LearnPageState();
 }
 
-class _LearnState extends State<Learn> {
+class _LearnPageState extends State<LearnPage> {
   int index = 0;
 
   @override
@@ -22,50 +20,6 @@ class _LearnState extends State<Learn> {
     final fullWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: kColorBackground,
-      drawer: const DrawerPage(),
-      appBar: AppBar(
-        backgroundColor: kColorBackground,
-        elevation: 0,
-        iconTheme: const IconThemeData(color: kColorTitleText),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: kPadding20),
-            child: IconBtn(
-                iconChoice: Icon(Icons.notifications_outlined),
-                navigate: '/notifications'),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        onTap: (value) {
-          setState(() {
-            index = value;
-          });
-        },
-        showUnselectedLabels: true,
-        unselectedItemColor: kColorTextLight,
-        selectedItemColor: kColorTitleText,
-        items: [
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/Learn.svg', height: 18),
-            label: "Learn",
-          ),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Apply.svg', height: 18),
-              label: "Apply"),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Play.svg', height: 18),
-              label: "Play"),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Music.svg', height: 18),
-              label: "Music"),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/Settings.svg', height: 18),
-              label: "Settings"),
-        ],
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
