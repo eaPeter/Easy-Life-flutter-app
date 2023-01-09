@@ -7,7 +7,7 @@ class DrawerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const name = 'John Doe';
     const email = 'johndoe@gmai.com';
-    const image = 'assets/images/logo.png';
+    const image = 'assets/images/profile_pic1.jpg';
     final drawerWidth = MediaQuery.of(context).size.width;
 
     return Drawer(
