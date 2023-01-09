@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class DrawerPage extends StatelessWidget {
@@ -67,7 +68,7 @@ class DrawerPage extends StatelessWidget {
                   icon: Icons.logout_outlined,
                   text: 'Log out',
                   navigate: () {
-                    Navigator.pushNamed(context, '/login');
+                    FirebaseAuth.instance.signOut();
                   },
                 ),
               ],
