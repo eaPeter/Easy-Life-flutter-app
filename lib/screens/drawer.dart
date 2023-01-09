@@ -1,3 +1,4 @@
+import 'package:easy_life/screens/login_signup/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,12 @@ class DrawerPage extends StatelessWidget {
                   icon: Icons.logout_outlined,
                   text: 'Log out',
                   navigate: () {
-                    FirebaseAuth.instance.signOut();
+                    FirebaseAuth.instance.signOut().then((value) {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Login()),
+                      );
+                    });
                   },
                 ),
               ],
