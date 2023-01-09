@@ -1,5 +1,6 @@
 import 'package:easy_life/components/toast.dart';
 import 'package:easy_life/constants.dart';
+import 'package:easy_life/screens/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -20,10 +21,17 @@ class _LoginState extends State<Login> {
 
   final _passController = TextEditingController();
 
-  Future signIn() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passController.text.trim());
+  Future<bool> signIn(String email, String password) async {
+    await FirebaseAuth.instance
+        .signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    )
+        .then((value) {
+      return true;
+    });
+
+    return false;
   }
 
   @override
@@ -80,7 +88,7 @@ class _LoginState extends State<Login> {
               ),
               DefaultAuthButton(
                   btnText: 'Login',
-                  navigate: () {
+                  navigate: () async {
                     String email = _emailController.text.trim();
                     String pass = _passController.text.trim();
 
@@ -90,6 +98,19 @@ class _LoginState extends State<Login> {
 
                     if (pass.isEmpty) {
                       return showToast('Enter password');
+                    }
+
+                    bool isloggedIn = await signIn(email, pass);
+                    if (isloggedIn) {
+                      //next screen
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Homepage(),
+                        ),
+                      );
+                    } else {
+                      showToast("Login failed");
                     }
                   }),
               Row(
