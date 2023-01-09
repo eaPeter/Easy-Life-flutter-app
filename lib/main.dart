@@ -32,12 +32,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const Homepage(),
+        // '/': (context) => const Homepage(),
+        '/': (context) => Login(),
 
         // '/': (context) => const Splash(),
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
-        // '/home': (context) => const Homepage(),
+        '/home': (context) => const Homepage(),
         // '/learn': (context) => const LearnPage(),
         // '/apply': (context) => const ApplyPage(),
         '/detailed_learn': (context) => DetailedLearnPage(),
