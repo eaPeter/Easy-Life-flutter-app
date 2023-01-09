@@ -36,7 +36,7 @@ class DetailedLearnPage extends StatelessWidget {
                 child: const Padding(
                   padding: EdgeInsets.all(kPadding20),
                   child: BackBtn(
-                    navigate: '/learn',
+                    navigate: '/',
                     whiteColorBool: true,
                   ),
                 ),
