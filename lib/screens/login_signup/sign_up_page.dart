@@ -73,7 +73,7 @@ class Signup extends StatelessWidget {
               //   onChanged: onChanged,
               //   value: dropDownValue,
               // ),
-              const DefaultAuthButton(btnText: 'Sign up', navigate: '/login'),
+              DefaultAuthButton(btnText: 'Sign up', navigate: () {}),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
