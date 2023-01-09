@@ -1,6 +1,8 @@
+import 'package:easy_life/components/toast.dart';
 import 'package:easy_life/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../../components/pass_txt_field.dart';
 import '../../components/txt_field.dart';
@@ -76,7 +78,20 @@ class _LoginState extends State<Login> {
                 hint: 'Enter your password',
                 txtController: _passController,
               ),
-              const DefaultAuthButton(btnText: 'Login', navigate: '/home'),
+              DefaultAuthButton(
+                  btnText: 'Login',
+                  navigate: () {
+                    String email = _emailController.text.trim();
+                    String pass = _passController.text.trim();
+
+                    if (email.isEmpty) {
+                      return showToast('Enter email address');
+                    }
+
+                    if (pass.isEmpty) {
+                      return showToast('Enter password');
+                    }
+                  }),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
