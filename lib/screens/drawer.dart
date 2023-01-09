@@ -102,10 +102,18 @@ Widget buildHeader({
   return Padding(
     padding: const EdgeInsets.only(top: 40),
     child: Row(children: [
-      Image.asset(
-        image,
+      Container(
         height: 50,
         width: 50,
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(),
+            image: DecorationImage(image: AssetImage(image))),
+        // child: Image.asset(
+        //   image,
+        //   height: 50,
+        //   width: 50,
+        // ),
       ),
       Padding(
         padding: const EdgeInsets.only(left: 16),
