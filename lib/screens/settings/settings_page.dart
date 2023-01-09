@@ -9,13 +9,13 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kColorBackground,
-      appBar: AppBar(
-        title: const Text('Settings', style: kTxtHeadingMainStyle),
-        centerTitle: true,
-        backgroundColor: kColorBackground,
-        elevation: 0,
-        iconTheme: const IconThemeData(color: kColorTitleText),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Settings', style: kTxtHeadingMainStyle),
+      //   centerTitle: true,
+      //   backgroundColor: kColorBackground,
+      //   elevation: 0,
+      //   iconTheme: const IconThemeData(color: kColorTitleText),
+      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
@@ -97,6 +97,23 @@ class SettingsPage extends StatelessWidget {
                     ListTile(
                       onTap: () => Navigator.pushNamed(context, '/'),
                       leading: const Icon(
+                        Icons.logout,
+                        color: kColorTitleText,
+                      ),
+                      title: const Text(
+                        'Logout',
+                        style: kTxtTopicStyle,
+                      ),
+                      subtitle: const Text(
+                        'Log out of account',
+                        style: kTxtOthersStyle,
+                      ),
+                      horizontalTitleGap: 1,
+                    ),
+                    const Divider(thickness: 1),
+                    ListTile(
+                      onTap: () => Navigator.pushNamed(context, '/'),
+                      leading: const Icon(
                         Icons.delete,
                         color: Colors.red,
                       ),
@@ -111,28 +128,27 @@ class SettingsPage extends StatelessWidget {
                       ),
                       horizontalTitleGap: 1,
                     ),
-                    const Divider(thickness: 1),
                   ],
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 52,
-                  margin: const EdgeInsets.symmetric(horizontal: kPadding20),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: kColorTitleText, width: 2),
-                  ),
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(kColorBackground),
-                    ),
-                    onPressed: () => Navigator.pushNamed(context, '/'),
-                    child: Text(
-                      'Log out',
-                      style: kTxtBtnStyle.copyWith(color: kColorTitleText),
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: double.infinity,
+                //   height: 52,
+                //   margin: const EdgeInsets.symmetric(horizontal: kPadding20),
+                //   decoration: BoxDecoration(
+                //     border: Border.all(color: kColorTitleText, width: 2),
+                //   ),
+                //   child: ElevatedButton(
+                //     style: ButtonStyle(
+                //       backgroundColor:
+                //           MaterialStateProperty.all(kColorBackground),
+                //     ),
+                //     onPressed: () => Navigator.pushNamed(context, '/'),
+                //     child: Text(
+                //       'Log out',
+                //       style: kTxtBtnStyle.copyWith(color: kColorTitleText),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
