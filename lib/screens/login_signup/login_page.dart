@@ -7,7 +7,7 @@ import '../../components/txt_field.dart';
 import 'default_auth_button.dart';
 
 class Login extends StatefulWidget {
-  Login({super.key});
+  const Login({super.key});
 
   @override
   State<Login> createState() => _LoginState();
