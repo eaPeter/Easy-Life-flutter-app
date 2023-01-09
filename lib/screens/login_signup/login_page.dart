@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                 hint: 'Enter your password',
                 txtController: _passController,
               ),
-              const DefaultAuthButton(btnText: 'Login', navigate: '/learn'),
+              const DefaultAuthButton(btnText: 'Login', navigate: '/home'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
