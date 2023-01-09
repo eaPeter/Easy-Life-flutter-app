@@ -1,4 +1,5 @@
 import 'package:easy_life/screens/apply/apply_page.dart';
+import 'package:easy_life/screens/homepage.dart';
 import 'package:easy_life/screens/learn/course_learn.dart';
 import 'package:easy_life/screens/settings/account_page.dart';
 import 'package:easy_life/screens/settings/settings_page.dart';
@@ -27,13 +28,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        // '/': (context) => const Learn(),
-        '/': (context) => const ApplyPage(),
+        '/': (context) => const Homepage(),
+        // '/': (context) => const ApplyPage(),
 
         // '/': (context) => const Splash(),
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
-        '/learn': (context) => const Learn(),
+        // '/home': (context) => const Homepage(),
+        '/learn': (context) => const LearnPage(),
         '/apply': (context) => const ApplyPage(),
         '/detailed_learn': (context) => DetailedLearnPage(),
         '/course_learn': (context) => const CourseLearn(),
