@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 //import screens
 import 'screens/notifications/notifications_page.dart';
@@ -15,7 +16,10 @@ import 'package:easy_life/screens/learn/course_learn.dart';
 import 'package:easy_life/screens/settings/account_page.dart';
 import 'package:easy_life/screens/settings/settings_page.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
