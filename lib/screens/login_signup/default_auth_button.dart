@@ -7,7 +7,7 @@ class DefaultAuthButton extends StatelessWidget {
       {super.key, required this.btnText, required this.navigate});
 
   final String btnText;
-  final String navigate;
+  final Function() navigate;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class DefaultAuthButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(kColorPrimary),
         ),
-        onPressed: () => Navigator.pushReplacementNamed(context, navigate),
+        onPressed: navigate,
         child: Text(
           btnText,
           style: kTxtBtnStyle,
