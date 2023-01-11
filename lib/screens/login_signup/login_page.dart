@@ -51,16 +51,12 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 120,
-              ),
+              const SizedBox(height: 120),
               Image.asset(
                 'assets/images/logo.png',
                 width: 162,
               ),
-              const SizedBox(
-                height: 48,
-              ),
+              const SizedBox(height: 48),
               RichText(
                   text: const TextSpan(
                 children: [
@@ -72,9 +68,7 @@ class _LoginState extends State<Login> {
                       style: kTxtSubTopicStyle),
                 ],
               )),
-              const SizedBox(
-                height: kPadding24,
-              ),
+              const SizedBox(height: kPadding24),
               TxtField(
                 title: 'Email address',
                 hint: 'Enter your email address',
