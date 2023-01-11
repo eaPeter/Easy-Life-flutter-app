@@ -18,7 +18,6 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
-
   final _passController = TextEditingController();
 
   Future<bool> signIn(String email, String password) async {
@@ -96,9 +95,9 @@ class _LoginState extends State<Login> {
                       return showToast('Enter email address');
                     }
 
-                    if (pass.isEmpty) {
-                      return showToast('Enter password');
-                    }
+                    // if (pass.isEmpty) {
+                    //   return showToast('Enter password');
+                    // }
 
                     bool isloggedIn = await signIn(email, pass);
                     if (isloggedIn) {
